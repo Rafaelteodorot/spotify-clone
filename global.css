@@ -1,0 +1,439 @@
+.font-title {
+  font-family: CircularSpVietnameseTitle, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, var(--fallback-fonts, sans-serif);
+}
+
+.font-text {
+  font-family: SpotifyMixUI, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, var(--fallback-fonts, sans-serif);
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-14px {
+  font-size: 14px;
+}
+
+.gap-8px {
+  gap: 8px;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.text-gray {
+  color: #b3b3b3;
+}
+
+.icon {
+  min-width: 24px;
+  height: 24px;
+  color: #b3b3b3;
+  fill: #b3b3b3;
+}
+
+.sm-icon {
+  min-width: 16px;
+  height: 16px;
+  color: #b3b3b3;
+  fill: #b3b3b3;
+}
+
+.xs-icon {
+  min-width: 12px;
+  height: 12px;
+  color: #b3b3b3;
+  fill: #b3b3b3;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.none {
+  display: none !important;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.icon-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  transition: background 200ms linear;
+}
+
+.icon-button.rotate-180deg {
+  transform: rotate(180deg);
+}
+
+.icon-button > svg {
+  transition: fill 200ms linear;
+}
+
+.icon-button.highlight:hover {
+  background: #1f1f1f;
+}
+
+.icon-button.highlight:hover > svg {
+  fill: #fff;
+}
+
+.button-base {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: none;
+  padding: 0;
+  height: 40px;
+  color: #b3b3b3;
+  font-family: CircularSpVietnameseTitle, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, var(--fallback-fonts, sans-serif);
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 200ms linear;
+}
+
+.button-base > svg {
+  transition: fill 200ms linear;
+}
+
+.button-base:hover {
+  color: #fff;
+}
+
+.button-base:hover > svg {
+  fill: #fff;
+}
+
+.button-white {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border: none;
+  padding: 0;
+  height: 40px;
+  color: #b3b3b3;
+  padding: 4px 16px;
+  font-family: CircularSpVietnameseTitle, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, var(--fallback-fonts, sans-serif);
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 200ms linear;
+}
+
+.button-white {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border: none;
+  padding: 0;
+  height: 32px;
+  color: #000;
+  padding: 4px 16px;
+  border-radius: 9999px;
+  font-family: CircularSpVietnameseTitle, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, var(--fallback-fonts, sans-serif);
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: color 200ms linear;
+}
+
+.button-black {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, .54);
+  border: none;
+  padding: 0;
+  height: 32px;
+  color: #fff;
+  padding: 4px 16px;
+  border-radius: 9999px;
+  font-family: CircularSpVietnameseTitle, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, var(--fallback-fonts, sans-serif);
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: color 200ms linear;
+}
+
+.button-link {
+  text-decoration: none;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  color: #b3b3b3;
+  font-family: CircularSpVietnameseTitle, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, var(--fallback-fonts, sans-serif);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.button-link:hover {
+  transform: scale(1.04);
+  text-decoration: underline;
+  color: #fff;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px 15px;
+  background: transparent;
+  border-radius: 9999px;
+  cursor: pointer;
+  border: 1px solid #7c7c7c;
+  font-family: SpotifyMixUI, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, var(--fallback-fonts, sans-serif);
+  font-weight: 700;
+  color: #fff;
+  height: 32px;
+  white-space: nowrap;
+}
+
+.button:hover {
+  transform: scale(1.04);
+  border-color: #fff;
+}
+
+.button.contained {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 4px 12px;
+}
+
+.button.contained:hover {
+  background: hsla(0, 0%, 100%, .14);
+  transform: none;
+}
+
+.button.scale:hover {
+  transform: scale(1.04);
+}
+
+.button-base.scale:hover {
+  transform: scale(1.04);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #1f1f1f;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 16px;
+}
+
+.card-calendar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.card-calendar:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.card-calendar > .date {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 56px;
+  height: 56px;
+  padding: 8px;
+  align-items: center;
+  background: #1f1f1f;
+  font-family: font-family: CircularSpVietnameseTitle, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, var(--fallback-fonts, sans-serif);
+  font-weight: 700;
+  border-radius: 4px;
+}
+
+.card-calendar > .date > span:first-child {
+  font-size: 11px;
+}
+
+.card-calendar > .date > span:last-child {
+  font-size: 24px;
+  line-height: 110%;
+}
+
+.card-calendar > .info {
+  color: #b3b3b3;
+  overflow: hidden;
+}
+
+.card-calendar > .info > h3 {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.card-calendar > .info > p {
+  margin: 0;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.card-calendar > .info > div {
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-track {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px;
+  color: #fff;
+  border-radius: 6px;
+}
+
+.card-track:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.card-track > svg {
+  min-width: 16px;
+  height: 16px;
+}
+
+.card-track > img {
+  width: 46px;
+  height: 46px;
+  border-radius: 4px;
+}
+
+.card-track > div {
+  overflow: hidden;
+}
+
+.card-track > div > *:last-child {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-playlist {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.card-playlist:hover {
+  background: #1f1f1f;
+}
+
+.card-playlist > img {
+  width: 48px;
+  height: 48px;
+  border-radius: 4px;
+}
+
+.card-playlist > div.folder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 4px;
+  background: #282828;
+}
+
+.card-playlist > .info {
+  overflow: hidden;
+  flex: 1;
+}
+
+.card-playlist > .info > h3 {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-playlist > .info > span > svg {
+  margin-right: 5px;
+  fill: #1ed760;
+}
+
+.card-playlist > .info > span > span {
+  color: #b3b3b3;
+  font-size: 14px;
+}
+
+.progress-bar {
+  position: relative;
+  background: rgba(255, 255, 255, 0.3);
+  height: 4px;
+  border-radius: 2px;
+}
+
+.progress-bar-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+  height: 100%;
+  border-radius: 2px;
+}

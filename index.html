@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Metadata -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicon -->
+  <link rel="icon" sizes="32x32" type="image/png" href="https://open.spotifycdn.com/cdn/images/favicon32.b64ecc03.png">
+  <link rel="icon" sizes="16x16" type="image/png" href="https://open.spotifycdn.com/cdn/images/favicon16.1c487bff.png">
+
+  <!-- Fonts -->
+  <link rel="icon" href="https://open.spotifycdn.com/cdn/images/favicon.0f31d2ea.ico">
+  <link rel="preload" href="https://encore.scdn.co/fonts/CircularSp-Book-a00e99ef9996a3a157fb6b746856d04f.woff2"
+    as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload"
+    href="https://encore.scdn.co/fonts/CircularSpotify-UI-Latin-Bold-39f75fe74e898cc9ebef1a4e8a6023b5.woff2" as="font"
+    type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="https://encore.scdn.co/fonts/CircularSpTitle-Bold-b2586b06a2e1522e9d879d84c2792a58.woff2"
+    as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload"
+    href="https://encore.scdn.co/fonts/CircularSpotify-UI-Latin-Book-ffeb1e7f75131ff615f338c73751b633.woff2" as="font"
+    type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="https://encore.scdn.co/fonts/CircularSp-Bold-602e7aefc706aa36c6ec1324b9bbc461.woff2"
+    as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload"
+    href="https://encore.scdn.co/fonts/CircularSpVietnamese-Bold-e9e1a3c95ac9706bd3a804e75f4f4631.woff2" as="font"
+    type="font/woff2" crossorigin="anonymous">
+  <link rel="preload"
+    href="https://encore.scdn.co/fonts/CircularSpVietnamese-Regular-25254eecedd0d2c685d884be9846962b.woff2" as="font"
+    type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="https://encore.scdn.co/fonts/CircularSpTitle-Black-4588c99025b967475c31695b0743dd1a.woff2"
+    as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload"
+    href="https://encore.scdn.co/fonts/CircularSpVietnameseTitle-Variable-7658d9c8211dd8a6b350b6507f7fdd1a.woff2"
+    as="font" type="font/woff2" crossorigin="anonymous">
+
+  <!-- Title -->
+  <title>Spotify – Web player: música para todas as pessoas</title>
+
+  <!-- My CSS -->
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="initialize.css">
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="right-sidebar.css">
+  <link rel="stylesheet" href="left-sidebar.css">
+  <link rel="stylesheet" href="content.css">
+  <link rel="stylesheet" href="about-artist-modal.css">
+</head>
+
+<body>
+  <main>
+    <!-- Left sidebar -->
+    <div class="left-sidebar">
+      <ul class="box">
+        <li class="font-title">
+          <svg data-encore-id="icon" role="img" aria-hidden="true"
+            class="Svg-sc-ytk21e-0 bneLcE home-icon QbaKKdcHNA2x3_YJvpYu" viewBox="0 0 24 24">
+            <path
+              d="M12.5 3.247a1 1 0 0 0-1 0L4 7.577V20h4.5v-6a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v6H20V7.577l-7.5-4.33zm-2-1.732a3 3 0 0 1 3 0l7.5 4.33a2 2 0 0 1 1 1.732V21a1 1 0 0 1-1 1h-6.5a1 1 0 0 1-1-1v-6h-3v6a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.577a2 2 0 0 1 1-1.732l7.5-4.33z">
+            </path>
+          </svg>
+
+          Início
+        </li>
+        <li class="font-title">
+          <svg data-encore-id="icon" role="img" aria-hidden="true"
+            class="Svg-sc-ytk21e-0 bneLcE search-icon QbaKKdcHNA2x3_YJvpYu" viewBox="0 0 24 24">
+            <path
+              d="M10.533 1.27893C5.35215 1.27893 1.12598 5.41887 1.12598 10.5579C1.12598 15.697 5.35215 19.8369 10.533 19.8369C12.767 19.8369 14.8235 19.0671 16.4402 17.7794L20.7929 22.132C21.1834 22.5226 21.8166 22.5226 22.2071 22.132C22.5976 21.7415 22.5976 21.1083 22.2071 20.7178L17.8634 16.3741C19.1616 14.7849 19.94 12.7634 19.94 10.5579C19.94 5.41887 15.7138 1.27893 10.533 1.27893ZM3.12598 10.5579C3.12598 6.55226 6.42768 3.27893 10.533 3.27893C14.6383 3.27893 17.94 6.55226 17.94 10.5579C17.94 14.5636 14.6383 17.8369 10.533 17.8369C6.42768 17.8369 3.12598 14.5636 3.12598 10.5579Z">
+            </path>
+          </svg>
+
+          Buscar
+        </li>
+      </ul>
+
+      <!-- Your Library -->
+      <div class="your-library">
+        <header class="flex justify-space-between items-center">
+          <button class="flex items-center button-base">
+            <svg class="icon" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24">
+              <path
+                d="M3 22a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1zM15.5 2.134A1 1 0 0 0 14 3v18a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V6.464a1 1 0 0 0-.5-.866l-6-3.464zM9 2a1 1 0 0 0-1 1v18a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1z">
+              </path>
+            </svg>
+            <span>Sua Biblioteca</span>
+          </button>
+
+          <div class="flex">
+            <!-- Create playlist -->
+            <button class="icon-button highlight">
+              <svg class="sm-icon" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16">
+                <path
+                  d="M15.25 8a.75.75 0 0 1-.75.75H8.75v5.75a.75.75 0 0 1-1.5 0V8.75H1.5a.75.75 0 0 1 0-1.5h5.75V1.5a.75.75 0 0 1 1.5 0v5.75h5.75a.75.75 0 0 1 .75.75z">
+                </path>
+              </svg>
+            </button>
+
+            <!-- View more -->
+            <button class="icon-button highlight">
+              <svg class="sm-icon" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16">
+                <path
+                  d="M7.19 1A.749.749 0 0 1 8.47.47L16 7.99l-7.53 7.521a.75.75 0 0 1-1.234-.815.75.75 0 0 1 .174-.243l5.72-5.714H.75a.75.75 0 1 1 0-1.498h12.38L7.41 1.529a.749.749 0 0 1-.22-.53z">
+                </path>
+              </svg>
+            </button>
+          </div>
+        </header>
+
+        <div class="filter flex items-center">
+          <button class="button contained">Playlists</button>
+          <button class="button contained">Podcasts e programas</button>
+        </div>
+
+        <div class="list flex flex-col">
+          <div class="filter flex justify-space-between">
+            <button class="icon-button">
+              <svg class="sm-icon" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16">
+                <path
+                  d="M7 1.75a5.25 5.25 0 1 0 0 10.5 5.25 5.25 0 0 0 0-10.5zM.25 7a6.75 6.75 0 1 1 12.096 4.12l3.184 3.185a.75.75 0 1 1-1.06 1.06L11.304 12.2A6.75 6.75 0 0 1 .25 7z">
+                </path>
+              </svg>
+            </button>
+
+            <button class="button-base scale flex justify-content-center items-center">
+              <span>Recentes</span>
+              <svg class="sm-icon" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16"
+                class="Svg-sc-ytk21e-0 cAMMLk">
+                <path
+                  d="M15 14.5H5V13h10v1.5zm0-5.75H5v-1.5h10v1.5zM15 3H5V1.5h10V3zM3 3H1V1.5h2V3zm0 11.5H1V13h2v1.5zm0-5.75H1v-1.5h2v1.5z">
+                </path>
+              </svg>
+            </button>
+          </div>
+
+          <ul class="playlists flex flex-col">
+            <li class="card-playlist flex">
+              <img src="https://misc.scdn.co/liked-songs/liked-songs-64.png">
+              <div class="info">
+                <h3 class="text-white">Músicas Curtidas</h3>
+                <span>
+                  <svg class="xs-icon" data-encore-id="icon" role="img" aria-hidden="false" viewBox="0 0 16 16">
+                    <title>Fixado</title>
+                    <path
+                      d="M8.822.797a2.72 2.72 0 0 1 3.847 0l2.534 2.533a2.72 2.72 0 0 1 0 3.848l-3.678 3.678-1.337 4.988-4.486-4.486L1.28 15.78a.75.75 0 0 1-1.06-1.06l4.422-4.422L.156 5.812l4.987-1.337L8.822.797z">
+                    </path>
+                  </svg>
+
+                  <span>Playlist • 14 músicas</span>
+                </span>
+              </div>
+            </li>
+
+            <li class="card-playlist flex">
+              <img
+                src="https://mosaic.scdn.co/60/ab67616d00001e02413697269620e16f4466f543ab67616d00001e0260cf7c8dd93815ccd6cb4830ab67616d00001e027c2b1dc1639152beaeadf00dab67616d00001e02ab0b0448520d99ff0aa7b1eb">
+              <div class="info">
+                <h3 class="text-white">2005 - 2014</h3>
+                <span>
+                  <span>Playlist • Edy Rodrigues</span>
+                </span>
+              </div>
+            </li>
+
+            <li class="card-playlist flex">
+              <img
+                src="https://mosaic.scdn.co/60/ab67616d00001e02c95743f0a5cb08dd4de28f72ab67616d00001e02dfbea1d3bedc0479e648e7bfab67616d00001e02f506c5f1c2a213cc11ca4ec4ab67616d00001e02fc14ffa9bb92aa7e107f5219">
+              <div class="info">
+                <h3 class="text-white">playlist stream</h3>
+                <span>
+                  <span>Playlist • ClovaoBengala</span>
+                </span>
+              </div>
+            </li>
+
+            <li class="card-playlist flex">
+              <img src="https://i.scdn.co/image/ab6765630000bdcfc0fe1cb83b05bc1f078b79ec">
+              <div class="info">
+                <h3 class="text-white">Listening Time: English Practice</h3>
+                <span>
+                  <span>Podcast • Sonoro | Conner Pe</span>
+                </span>
+              </div>
+            </li>
+
+            <li class="card-playlist flex">
+              <div class="folder">
+                <svg class="icon" data-encore-id="icon" role="img" aria-hidden="true" data-testid="folder"
+                  viewBox="0 0 24 24">
+                  <path
+                    d="M1 4a2 2 0 0 1 2-2h5.155a3 3 0 0 1 2.598 1.5l.866 1.5H21a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4zm7.155 0H3v16h18V7H10.464L9.021 4.5a1 1 0 0 0-.866-.5z">
+                  </path>
+                </svg>
+              </div>
+              <div class="info">
+                <h3 class="text-white">Rock</h3>
+                <span>
+                  <span> 3 playlists</span>
+                </span>
+              </div>
+
+              <button class="icon-button">
+                <svg class="sm-icon" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16">
+                  <path d="m14 6-6 6-6-6h12z"></path>
+                </svg>
+              </button>
+            </li>
+
+            <li class="card-playlist flex">
+              <img
+                src="https://mosaic.scdn.co/60/ab67616d00001e027d6d0bcf4a2596b57343b50dab67616d00001e02c5328aa8e9841656eac3a092ab67616d00001e02e29659427c625d1ea362b108ab67616d00001e02fcc6c59793b1d97b89cc53ff">
+              <div class="info">
+                <h3 class="text-white">Poesia Acústica</h3>
+                <span>
+                  <span>Playlist • Edy Rodrigues</span>
+                </span>
+              </div>
+            </li>
+
+            <li class="card-playlist flex">
+              <img
+                src="https://mosaic.scdn.co/60/ab67616d00001e020cee78c3082e95d273d95f77ab67616d00001e02312aaa2812c795109dd87a25ab67616d00001e025c01b2cf88f8e7e2c5c8165fab67616d00001e0261fb1b0126353b13d9bc59ad">
+              <div class="info">
+                <h3 class="text-white">Trap</h3>
+                <span>
+                  <span>Playlist • Edy Rodrigues</span>
+                </span>
+              </div>
+            </li>
+
+            <li class="card-playlist flex">
+              <img
+                src="https://mosaic.scdn.co/60/ab67616d00001e0211a057790180926439c1912cab67616d00001e024f0f4ae1cfcd901cd8ce2987ab67616d00001e0268f69db0f08857ec0bbc8dd9ab67616d00001e02ddf7b784cdc455690c747b63">
+              <div class="info">
+                <h3 class="text-white">Funk</h3>
+                <span>
+                  <span>Playlist • Edy Rodrigues</span>
+                </span>
+              </div>
+            </li>
+
+            <li class="card-playlist flex">
+              <img src="https://i.scdn.co/image/ab67616d0000e1a3fbd9b41a77b7bb918a820541">
+              <div class="info">
+                <h3 class="text-white">Games</h3>
+                <span>
+                  <span>Playlist • Edy Rodrigues</span>
+                </span>
+              </div>
+            </li>
+
+            <li class="card-playlist flex">
+              <img
+                src="https://mosaic.scdn.co/60/ab67616d00001e021faa5acc9f479da7a0258c8aab67616d00001e02654ddf5725b164761d445181ab67616d00001e02c6b6244ab810f6b0b8528bfaab67616d00001e02fda751b535b40b6f1066e480">
+              <div class="info">
+                <h3 class="text-white">Earthquake</h3>
+                <span>
+                  <span>Playlist • Felipe martins pupo</span>
+                </span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content center -->
+    <div class="content">
+      <header>
+        <nav class="flex">
+          <button class="icon-button">
+            <svg class="sm-icon" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16">
+              <path
+                d="M11.03.47a.75.75 0 0 1 0 1.06L4.56 8l6.47 6.47a.75.75 0 1 1-1.06 1.06L2.44 8 9.97.47a.75.75 0 0 1 1.06 0z">
+              </path>
+            </svg>
+          </button>
+          <button class="icon-button">
+            <svg class="sm-icon" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16">
+              <path
+                d="M4.97.47a.75.75 0 0 0 0 1.06L11.44 8l-6.47 6.47a.75.75 0 1 0 1.06 1.06L13.56 8 6.03.47a.75.75 0 0 0-1.06 0z">
+              </path>
+            </svg>
+          </button>
+        </nav>
+        <div class="flex items-center">
+          <button class="button-white">Ver planos Premium</button>
+          <button class="button-black">
+            <svg class="sm-icon" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16">
+              <path
+                d="M4.995 8.745a.75.75 0 0 1 1.06 0L7.25 9.939V4a.75.75 0 0 1 1.5 0v5.94l1.195-1.195a.75.75 0 1 1 1.06 1.06L8 12.811l-.528-.528a.945.945 0 0 1-.005-.005L4.995 9.805a.75.75 0 0 1 0-1.06z">
+              </path>
+              <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13z"></path>
+            </svg>
+            Instalar aplicativo
+          </button>
+          <button class="icon-button">
+            <svg class="sm-icon" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16">
+              <path
+                d="M8 1.5a4 4 0 0 0-4 4v3.27a.75.75 0 0 1-.1.373L2.255 12h11.49L12.1 9.142a.75.75 0 0 1-.1-.374V5.5a4 4 0 0 0-4-4zm-5.5 4a5.5 5.5 0 0 1 11 0v3.067l2.193 3.809a.75.75 0 0 1-.65 1.124H10.5a2.5 2.5 0 0 1-5 0H.957a.75.75 0 0 1-.65-1.124L2.5 8.569V5.5zm4.5 8a1 1 0 1 0 2 0H7z">
+              </path>
+            </svg>
+          </button>
+          <button class="icon-button">
+            <span>E</span>
+          </button>
+        </div>
+      </header>
+
+      <div class="sections">
+        <section class="flex flex-col">
+          <div class="section-title flex justify-space-between items-center">
+            <div class="flex flex-col">
+              <a href="#" class="font-title link">Feito para Edy Rodrigues</a>
+            </div>
+            <a href="#" class="link text-gray font-bold">Mostrar tudo</a>
+          </div>
+
+          <div class="cards-container">
+            <div class="section-card">
+              <div>
+                <img
+                  src="https://dailymix-images.scdn.co/v2/img/ab6761610000e5eb5c3349ddba6b8e064c1bab16/1/pt/default" />
+              </div>
+              <span class="description">Avril Lavigne, Deorro, Pitbull e mais</span>
+            </div>
+
+            <div class="section-card">
+              <div>
+                <img
+                  src="https://dailymix-images.scdn.co/v2/img/ab6761610000e5eb95937743bc43f4408033e7c6/2/pt/default" />
+              </div>
+              <span class="description">Chemical Surf, Liu, Vegas (Brazil) e mais</span>
+            </div>
+
+            <div class="section-card">
+              <div>
+                <img
+                  src="https://dailymix-images.scdn.co/v2/img/ab6761610000e5eb95937743bc43f4408033e7c6/3/pt/default" />
+              </div>
+              <span class="description">Chemical Surf, Liu, Vegas (Brazil) e mais</span>
+            </div>
+
+            <div class="section-card">
+              <div>
+                <img
+                  src="https://dailymix-images.scdn.co/v2/img/ab6761610000e5eba00b11c129b27a88fc72f36b/4/pt/default" />
+              </div>
+              <span class="description">Eminem, Chris Brown, Wiz Khalifa e mais</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="flex flex-col">
+          <div class="section-title flex justify-space-between items-center">
+            <div class="flex flex-col">
+              <a href="#" class="font-title link">Seus mixes mais ouvidos</a>
+            </div>
+            <a href="#" class="link text-gray font-bold">Mostrar tudo</a>
+          </div>
+
+          <div class="cards-container">
+            <div class="section-card">
+              <div>
+                <img src="https://seed-mix-image.spotifycdn.com/v6/img/artist/1Ffb6ejR6Fe5IamqA5oRUF/pt/default" />
+              </div>
+              <span class="description"><a href="#" class="link text-gray">Architects</a>, <a href="#"
+                  class="link text-gray">A Day To Remember</a> e <a href="#" class="link text-gray">Bullet...</a>
+              </span>
+            </div>
+
+            <div class="section-card">
+              <div>
+                <img src="https://seed-mix-image.spotifycdn.com/v6/img/punk/0p4nmQO2msCgU4IF37Wi3j/pt/default" />
+              </div>
+              <span class="description"><a href="#" class="link text-gray">Avril Lavigne</a>, <a href="#"
+                  class="link text-gray">Green Day</a> e mais</span>
+            </div>
+
+            <div class="section-card">
+              <div>
+                <img src="https://seed-mix-image.spotifycdn.com/v6/img/upbeat/2DlGxzQSjYe5N6G9nkYghR/pt/default" />
+              </div>
+              <span class="description"><a href="#" class="link text-gray">Jennifer Lopes</a>, <a href="#"
+                  class="link text-gray">USHER</a>, <a href="#" class="link text-gray">P!nk</a> e mais</span>
+            </div>
+
+            <div class="section-card">
+              <div>
+                <img src="https://seed-mix-image.spotifycdn.com/v6/img/artist/6XyY86QOPPrYVGvF9ch6wz/pt/default" />
+              </div>
+              <span class="description"><a href="#" class="link text-gray">Bring Me The Horizon</a>, <a href="#"
+                  class="link text-gray">Green Day</a> e mais</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="flex flex-col">
+          <div class="section-title flex justify-space-between items-center">
+            <div class="flex flex-col">
+              <a href="#" class="font-title link">Tocados recentemente</a>
+            </div>
+            <a href="#" class="link text-gray font-bold">Mostrar tudo</a>
+          </div>
+
+          <div class="cards-container">
+            <div class="section-card">
+              <div>
+                <img
+                  src="https://mosaic.scdn.co/300/ab67616d00001e02413697269620e16f4466f543ab67616d00001e0260cf7c8dd93815ccd6cb4830ab67616d00001e027c2b1dc1639152beaeadf00dab67616d00001e02ab0b0448520d99ff0aa7b1eb" />
+              </div>
+              <span class="title">2005 - 2014</span>
+              <span class="description">De Edy Rodrigues</span>
+            </div>
+
+            <div class="section-card">
+              <div>
+                <img src="https://i.scdn.co/image/ab67616d00001e029c291af4bf0c3071847f2b80" />
+              </div>
+              <span class="title">Under My Skin</span>
+              <span class="description"><a href="#" class="link text-gray">Avril Lavigne</a></span>
+            </div>
+
+            <div class="section-card">
+              <div>
+                <img src="https://i.scdn.co/image/ab67616d00001e02413697269620e16f4466f543" />
+              </div>
+              <span class="description"><a href="#" class="link text-gray">Jennifer Lopes</a>, <a href="#"
+                  class="link text-gray">USHER</a>, <a href="#" class="link text-gray">P!nk</a> e mais</span>
+            </div>
+
+            <div class="section-card fill"></div>
+          </div>
+        </section>
+
+        <section class="flex flex-col">
+          <div class="section-title flex justify-space-between items-center">
+            <div class="flex flex-col">
+              <span>Inspirado na sua atividade recente</span>
+              <a href="#" class="font-title link">Com base no que você ouviu recentemente</a>
+            </div>
+            <a href="#" class="link text-gray font-bold">Mostrar tudo</a>
+          </div>
+
+          <div class="cards-container">
+            <div class="section-card">
+              <div>
+                <img src="https://i.scdn.co/image/ab67706f0000000254faa65c795bfb2902106094" />
+              </div>
+              <span class="description">Relembre e descubra grandes sucessos em 2005. Foto: Pussycat Dolls</span>
+            </div>
+
+            <div class="section-card">
+              <div>
+                <img src="https://i.scdn.co/image/ab67706f000000023e56ec6cc663723d73617d61" />
+              </div>
+              <span class="description"><a href="#" class="link text-gray">Relembre e descubra grandes sucessos em 2002.
+                  Foto: Nelly</a></span>
+            </div>
+
+            <div class="section-card">
+              <div>
+                <img src="https://i.scdn.co/image/ab67706f00000002e2d544ca628ce77d96987382" />
+              </div>
+              <span class="description">Relembre e descubra grandes sucessos em 2008. Foto: Rihanna</span>
+            </div>
+
+            <div class="section-card">
+              <div>
+                <img src="https://i.scdn.co/image/ab67706f000000029bcc934fd810adc4a1e7c811" />
+              </div>
+              <span class="description">Relembre e descubra grandes sucessos em 2013. Foto: Bruno Mars</span>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <footer>
+        <div class="flex gap-8px">
+          <div class="flex flex-col gap-8px">
+            <span class="font-bold text-white">Empresa</span>
+            <a href="#" class="link text-gray">Sobre</a>
+            <a href="#" class="link text-gray">Empregos</a>
+            <a href="#" class="link text-gray">For the Record</a>
+          </div>
+
+          <div class="flex flex-col gap-8px">
+            <span class="font-bold text-white">Comunidades</span>
+            <a href="#" class="link text-gray">Para Artistas</a>
+            <a href="#" class="link text-gray">Desenvolvedores</a>
+            <a href="#" class="link text-gray">Publicidade</a>
+            <a href="#" class="link text-gray">Investidores</a>
+            <a href="#" class="link text-gray">Fornecedores</a>
+          </div>
+
+          <div class="flex flex-col gap-8px">
+            <span class="font-bold text-white">Link úteis</span>
+            <a href="#" class="link text-gray">Suporte</a>
+            <a href="#" class="link text-gray">Aplicativo móvel grátis</a>
+          </div>
+
+          <div class="flex flex-col gap-8px">
+            <span class="font-bold text-white">Planos do Spotify</span>
+            <a href="#" class="link text-gray">Premium Individual</a>
+            <a href="#" class="link text-gray">Premium Duo</a>
+            <a href="#" class="link text-gray">Premium Família</a>
+            <a href="#" class="link text-gray">Premium Universitário</a>
+            <a href="#" class="link text-gray">Spotify Free</a>
+          </div>
+
+          <div class="link-medias flex items-center">
+            <a href="https://instagram.com/spotify" target="_blank" class="icon-button">
+              <svg class="sm-icon fill-white" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16">
+                <path
+                  d="M8 1.44c2.136 0 2.389.009 3.233.047.78.036 1.203.166 1.485.276.348.128.663.332.921.598.266.258.47.573.599.921.11.282.24.706.275 1.485.039.844.047 1.097.047 3.233s-.008 2.389-.047 3.232c-.035.78-.166 1.204-.275 1.486a2.654 2.654 0 0 1-1.518 1.518c-.282.11-.706.24-1.486.275-.843.039-1.097.047-3.233.047s-2.39-.008-3.232-.047c-.78-.035-1.204-.165-1.486-.275a2.477 2.477 0 0 1-.921-.599 2.477 2.477 0 0 1-.599-.92c-.11-.282-.24-.706-.275-1.486-.038-.844-.047-1.096-.047-3.232s.009-2.39.047-3.233c.036-.78.166-1.203.275-1.485.129-.348.333-.663.599-.921a2.49 2.49 0 0 1 .92-.599c.283-.11.707-.24 1.487-.275.843-.038 1.096-.047 3.232-.047L8 1.441zm.001-1.442c-2.172 0-2.445.01-3.298.048-.854.04-1.435.176-1.943.373a3.928 3.928 0 0 0-1.417.923c-.407.4-.722.883-.923 1.417-.198.508-.333 1.09-.372 1.942C.01 5.552 0 5.826 0 8c0 2.172.01 2.445.048 3.298.04.853.174 1.433.372 1.941.2.534.516 1.017.923 1.417.4.407.883.722 1.417.923.508.198 1.09.333 1.942.372.852.039 1.126.048 3.299.048 2.172 0 2.445-.01 3.298-.048.853-.04 1.433-.174 1.94-.372a4.087 4.087 0 0 0 2.34-2.34c.199-.508.334-1.09.373-1.942.039-.851.048-1.125.048-3.298s-.01-2.445-.048-3.298c-.04-.853-.174-1.433-.372-1.94a3.924 3.924 0 0 0-.923-1.418A3.928 3.928 0 0 0 13.24.42c-.508-.197-1.09-.333-1.942-.371-.851-.041-1.125-.05-3.298-.05l.001-.001z">
+                </path>
+                <path
+                  d="M8 3.892a4.108 4.108 0 1 0 0 8.216 4.108 4.108 0 0 0 0-8.216zm0 6.775a2.668 2.668 0 1 1 0-5.335 2.668 2.668 0 0 1 0 5.335zm4.27-5.978a.96.96 0 1 0 0-1.92.96.96 0 0 0 0 1.92z">
+                </path>
+              </svg>
+            </a>
+
+            <a href="#" class="icon-button">
+              <svg class="sm-icon" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16">
+                <path
+                  d="M13.54 3.889a2.968 2.968 0 0 0 1.333-1.683 5.937 5.937 0 0 1-1.929.738 2.992 2.992 0 0 0-.996-.706 2.98 2.98 0 0 0-1.218-.254 2.92 2.92 0 0 0-2.143.889 2.929 2.929 0 0 0-.889 2.15c0 .212.027.442.08.691a8.475 8.475 0 0 1-3.484-.932A8.536 8.536 0 0 1 1.532 2.54a2.993 2.993 0 0 0-.413 1.523c0 .519.12 1 .361 1.445.24.445.57.805.988 1.08a2.873 2.873 0 0 1-1.373-.374v.04c0 .725.23 1.365.69 1.92a2.97 2.97 0 0 0 1.739 1.048 2.937 2.937 0 0 1-1.365.056 2.94 2.94 0 0 0 1.063 1.5 2.945 2.945 0 0 0 1.77.603 5.944 5.944 0 0 1-3.77 1.302c-.243 0-.484-.016-.722-.048A8.414 8.414 0 0 0 5.15 14c.905 0 1.763-.12 2.572-.361.81-.24 1.526-.57 2.147-.988a9.044 9.044 0 0 0 1.683-1.46c.5-.556.911-1.155 1.234-1.798a9.532 9.532 0 0 0 .738-1.988 8.417 8.417 0 0 0 .246-2.429 6.177 6.177 0 0 0 1.508-1.563c-.56.249-1.14.407-1.738.476z">
+                </path>
+              </svg>
+            </a>
+
+            <a href="#" class="icon-button">
+              <svg class="sm-icon" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16">
+                <path
+                  d="M16 8a8 8 0 1 0-9.25 7.903v-5.59H4.719V8H6.75V6.237c0-2.005 1.194-3.112 3.022-3.112.875 0 1.79.156 1.79.156V5.25h-1.008c-.994 0-1.304.617-1.304 1.25V8h2.219l-.355 2.313H9.25v5.59A8.002 8.002 0 0 0 16 8z">
+                </path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="more-links">
+          <div>
+            <a href="#" class="link text-gray">Legal</a>
+            <a href="#" class="link text-gray">Segurança e Centro de privacidade</a>
+            <a href="#" class="link text-gray">Política de privacidade</a>
+            <a href="#" class="link text-gray">Cookies</a>
+            <a href="#" class="link text-gray">Sobre anúncios</a>
+            <a href="#" class="link text-gray">Acessibilidade</a>
+          </div>
+          <div>
+            © 2024 Spotify AB
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Right sidebar -->
+    <div class="right-sidebar">
+      <header>
+        <a href="#">Throne</a>
+        <div>
+          <button>
+            <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16" class="Svg-sc-ytk21e-0 dYnaPI">
+              <path
+                d="M3 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm6.5 0a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zM16 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z">
+              </path>
+            </svg>
+          </button>
+          <button>
+            <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16" class="Svg-sc-ytk21e-0 dYnaPI">
+              <path
+                d="M2.47 2.47a.75.75 0 0 1 1.06 0L8 6.94l4.47-4.47a.75.75 0 1 1 1.06 1.06L9.06 8l4.47 4.47a.75.75 0 1 1-1.06 1.06L8 9.06l-4.47 4.47a.75.75 0 0 1-1.06-1.06L6.94 8 2.47 3.53a.75.75 0 0 1 0-1.06Z">
+              </path>
+            </svg>
+          </button>
+        </div>
+      </header>
+      <div>
+        <div class="track-info">
+          <div>
+            <a href="#">
+              <img src="https://i.scdn.co/image/ab67616d0000b273413697269620e16f4466f543">
+            </a>
+          </div>
+          <div>
+            <div class="artist-info">
+              <a href="#">Throne</a>
+              <a href="#">Bring Me The Horizon</a>
+            </div>
+
+            <button>
+              <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16">
+                <path
+                  d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm11.748-1.97a.75.75 0 0 0-1.06-1.06l-4.47 4.47-1.405-1.406a.75.75 0 1 0-1.061 1.06l2.466 2.467 5.53-5.53z">
+                </path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+
+        <button class="about-artist card" id="about-artist-button">
+          <img src="https://i.scdn.co/image/ab6761670000ecd4aa00546de6a62ce643102ffc" />
+          <div>
+            <a href="#" class="font-title link font-bold">Bring Me The Horizon</a>
+            <div>
+              <span class="text-gray font-text">14.169.460 ouvintes mensais</span>
+              <div class="button follow">Seguir</div>
+            </div>
+            <div>
+              <span class="text-gray font-text font-bold">BRING ME THE HORIZON</span>
+              <span class="text-gray font-text font-bold">https://www.bmthofficial.com</span>
+            </div>
+          </div>
+        </button>
+
+        <div class="card">
+          <div class="flex justify-space-between items-center">
+            <span class="font-title text-white">Créditos</span>
+            <button class="button-link">Mostrar tudo</button>
+          </div>
+
+          <div class="flex items-center">
+            <div class="flex flex-col">
+              <a class="link text-white" href="#">Bring Me The Horizon</a>
+              <span class="text-gray font-text font-14px">Artista Principal</span>
+            </div>
+            <button class="button follow">Seguir</button>
+          </div>
+
+          <div class="flex flex-col">
+            <span class="text-white">Oliver Sykes</span>
+            <span class="text-gray font-text font-14px">Compositor, Letrista, Produtor</span>
+          </div>
+
+          <div class="flex flex-col">
+            <span class="text-white">Lee Malia</span>
+            <span class="text-gray font-text font-14px">Compositor, Letrista</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="flex justify-space-between items-center">
+            <span class="font-title text-white">Em turnê</span>
+            <button class="button-link">Mostrar tudo</button>
+          </div>
+
+          <a class="card-calendar" href="#">
+            <div class="date">
+              <span>Ago.</span>
+              <span>17</span>
+            </div>
+
+            <div class="info">
+              <h3>千葉市美浜区</h3>
+              <p>GLAY com Belle and Sebastian, Gen Hoshino, SUPER BEAVER e OneRepublic mais…</p>
+              <div>sáb., 11:00 • ZOZOマリンスタジアム/幕張メッセ</div>
+            </div>
+          </a>
+
+          <a class="card-calendar" href="#">
+            <div class="date">
+              <span>Ago.</span>
+              <span>17</span>
+            </div>
+
+            <div class="info">
+              <h3>吹田市</h3>
+              <p>SUMMER SONIC 2024 [OSAKA]</p>
+              <div>sáb., 11:00 • 万博記念公園</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="card">
+          <div class="flex justify-space-between items-center">
+            <span class="font-title text-white">A seguir</span>
+            <button class="button-link">Abrir fila</button>
+          </div>
+
+          <div class="card-track">
+            <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16" class="icon">
+              <path d="M10 2v9.5a2.75 2.75 0 1 1-2.75-2.75H8.5V2H10zm-1.5 8.25H7.25A1.25 1.25 0 1 0 8.5 11.5v-1.25z">
+              </path>
+            </svg>
+            <img src="https://i.scdn.co/image/ab67616d000048517c2b1dc1639152beaeadf00d">
+            <div class="flex flex-col">
+              <a class="link text-white" href="#">Teardrops</a>
+              <a class="link text-gray" href="#">Bring Me The Horizon</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="player-info">
+      <div class="container-info">
+        <div class="container-image relative">
+          <button class="absolute icon-button">
+            <svg class="sm-icon" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16">
+              <path
+                d="M.47 4.97a.75.75 0 0 1 1.06 0L8 11.44l6.47-6.47a.75.75 0 1 1 1.06 1.06L8 13.56.47 6.03a.75.75 0 0 1 0-1.06z">
+              </path>
+            </svg>
+          </button>
+          <img src="https://i.scdn.co/image/ab67616d00004851413697269620e16f4466f543">
+        </div>
+
+        <div class="container-info-band">
+          <h5>Throne</h5>
+          <span>Bring Me The Horizon</span>
+        </div>
+
+        <button>
+          <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16">
+            <path
+              d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm11.748-1.97a.75.75 0 0 0-1.06-1.06l-4.47 4.47-1.405-1.406a.75.75 0 1 0-1.061 1.06l2.466 2.467 5.53-5.53z">
+            </path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="player-control">
+      <div class="player-control-actions">
+        <!-- Randomize button -->
+        <button>
+          <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16" class="Svg-sc-ytk21e-0 dYnaPI">
+            <path
+              d="M13.151.922a.75.75 0 1 0-1.06 1.06L13.109 3H11.16a3.75 3.75 0 0 0-2.873 1.34l-6.173 7.356A2.25 2.25 0 0 1 .39 12.5H0V14h.391a3.75 3.75 0 0 0 2.873-1.34l6.173-7.356a2.25 2.25 0 0 1 1.724-.804h1.947l-1.017 1.018a.75.75 0 0 0 1.06 1.06L15.98 3.75 13.15.922zM.391 3.5H0V2h.391c1.109 0 2.16.49 2.873 1.34L4.89 5.277l-.979 1.167-1.796-2.14A2.25 2.25 0 0 0 .39 3.5z">
+            </path>
+            <path
+              d="m7.5 10.723.98-1.167.957 1.14a2.25 2.25 0 0 0 1.724.804h1.947l-1.017-1.018a.75.75 0 1 1 1.06-1.06l2.829 2.828-2.829 2.828a.75.75 0 1 1-1.06-1.06L13.109 13H11.16a3.75 3.75 0 0 1-2.873-1.34l-.787-.938z">
+            </path>
+          </svg>
+        </button>
+
+        <!-- Backward button -->
+        <button>
+          <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16" class="Svg-sc-ytk21e-0 dYnaPI">
+            <path
+              d="M3.3 1a.7.7 0 0 1 .7.7v5.15l9.95-5.744a.7.7 0 0 1 1.05.606v12.575a.7.7 0 0 1-1.05.607L4 9.149V14.3a.7.7 0 0 1-.7.7H1.7a.7.7 0 0 1-.7-.7V1.7a.7.7 0 0 1 .7-.7h1.6z">
+            </path>
+          </svg>
+        </button>
+
+        <!-- Pause button -->
+        <button class="pause">
+          <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16" class="Svg-sc-ytk21e-0 dYnaPI">
+            <path
+              d="M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288V1.713z">
+            </path>
+          </svg>
+        </button>
+
+        <!-- Farward button -->
+        <button>
+          <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16" class="Svg-sc-ytk21e-0 dYnaPI">
+            <path
+              d="M12.7 1a.7.7 0 0 0-.7.7v5.15L2.05 1.107A.7.7 0 0 0 1 1.712v12.575a.7.7 0 0 0 1.05.607L12 9.149V14.3a.7.7 0 0 0 .7.7h1.6a.7.7 0 0 0 .7-.7V1.7a.7.7 0 0 0-.7-.7h-1.6z">
+            </path>
+          </svg>
+        </button>
+
+        <!-- Repetition button -->
+        <button>
+          <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16" class="Svg-sc-ytk21e-0 dYnaPI">
+            <path
+              d="M0 4.75A3.75 3.75 0 0 1 3.75 1h8.5A3.75 3.75 0 0 1 16 4.75v5a3.75 3.75 0 0 1-3.75 3.75H9.81l1.018 1.018a.75.75 0 1 1-1.06 1.06L6.939 12.75l2.829-2.828a.75.75 0 1 1 1.06 1.06L9.811 12h2.439a2.25 2.25 0 0 0 2.25-2.25v-5a2.25 2.25 0 0 0-2.25-2.25h-8.5A2.25 2.25 0 0 0 1.5 4.75v5A2.25 2.25 0 0 0 3.75 12H5v1.5H3.75A3.75 3.75 0 0 1 0 9.75v-5z">
+            </path>
+          </svg>
+        </button>
+      </div>
+      <div class="player-control-bar">
+        <span>0:13</span>
+        <div class="progress-bar">
+          <div class="progress-bar-indicator"></div>
+        </div>
+        <span>3:11</span>
+      </div>
+    </div>
+    <div class="player-actions">
+      <!-- Playing now button -->
+      <button class="playing-now">
+        <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16" class="Svg-sc-ytk21e-0 dYnaPI">
+          <path d="M11.196 8 6 5v6l5.196-3z"></path>
+          <path
+            d="M15.002 1.75A1.75 1.75 0 0 0 13.252 0h-10.5a1.75 1.75 0 0 0-1.75 1.75v12.5c0 .966.783 1.75 1.75 1.75h10.5a1.75 1.75 0 0 0 1.75-1.75V1.75zm-1.75-.25a.25.25 0 0 1 .25.25v12.5a.25.25 0 0 1-.25.25h-10.5a.25.25 0 0 1-.25-.25V1.75a.25.25 0 0 1 .25-.25h10.5z">
+          </path>
+        </svg>
+      </button>
+
+      <!-- Lyrics button -->
+      <button>
+        <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16" class="Svg-sc-ytk21e-0 dYnaPI">
+          <path
+            d="M13.426 2.574a2.831 2.831 0 0 0-4.797 1.55l3.247 3.247a2.831 2.831 0 0 0 1.55-4.797zM10.5 8.118l-2.619-2.62A63303.13 63303.13 0 0 0 4.74 9.075L2.065 12.12a1.287 1.287 0 0 0 1.816 1.816l3.06-2.688 3.56-3.129zM7.12 4.094a4.331 4.331 0 1 1 4.786 4.786l-3.974 3.493-3.06 2.689a2.787 2.787 0 0 1-3.933-3.933l2.676-3.045 3.505-3.99z">
+          </path>
+        </svg>
+      </button>
+
+      <!-- Queue button -->
+      <button>
+        <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16" class="Svg-sc-ytk21e-0 dYnaPI">
+          <path
+            d="M15 15H1v-1.5h14V15zm0-4.5H1V9h14v1.5zm-14-7A2.5 2.5 0 0 1 3.5 1h9a2.5 2.5 0 0 1 0 5h-9A2.5 2.5 0 0 1 1 3.5zm2.5-1a1 1 0 0 0 0 2h9a1 1 0 1 0 0-2h-9z">
+          </path>
+        </svg>
+      </button>
+
+      <!-- Connect device button -->
+      <button>
+        <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16" class="Svg-sc-ytk21e-0 dYnaPI">
+          <path
+            d="M6 2.75C6 1.784 6.784 1 7.75 1h6.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15h-6.5A1.75 1.75 0 0 1 6 13.25V2.75zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h6.5a.25.25 0 0 0 .25-.25V2.75a.25.25 0 0 0-.25-.25h-6.5zm-6 0a.25.25 0 0 0-.25.25v6.5c0 .138.112.25.25.25H4V11H1.75A1.75 1.75 0 0 1 0 9.25v-6.5C0 1.784.784 1 1.75 1H4v1.5H1.75zM4 15H2v-1.5h2V15z">
+          </path>
+          <path d="M13 10a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm-1-5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"></path>
+        </svg>
+      </button>
+
+      <!-- Volume button -->
+      <button>
+        <svg data-encore-id="icon" role="presentation" aria-label="Volume médio" aria-hidden="true" id="volume-icon"
+          viewBox="0 0 16 16" class="Svg-sc-ytk21e-0 kcUFwU">
+          <path
+            d="M9.741.85a.75.75 0 0 1 .375.65v13a.75.75 0 0 1-1.125.65l-6.925-4a3.642 3.642 0 0 1-1.33-4.967 3.639 3.639 0 0 1 1.33-1.332l6.925-4a.75.75 0 0 1 .75 0zm-6.924 5.3a2.139 2.139 0 0 0 0 3.7l5.8 3.35V2.8l-5.8 3.35zm8.683 6.087a4.502 4.502 0 0 0 0-8.474v1.65a2.999 2.999 0 0 1 0 5.175v1.649z">
+          </path>
+        </svg>
+      </button>
+
+      <!-- Volume bar -->
+      <div class="progress-bar">
+        <div class="progress-bar-indicator"></div>
+      </div>
+
+      <!-- Miniplayer button -->
+      <button>
+        <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16" class="Svg-sc-ytk21e-0 dYnaPI">
+          <path
+            d="M16 2.45c0-.8-.65-1.45-1.45-1.45H1.45C.65 1 0 1.65 0 2.45v11.1C0 14.35.65 15 1.45 15h5.557v-1.5H1.5v-11h13V7H16V2.45z">
+          </path>
+          <path
+            d="M15.25 9.007a.75.75 0 0 1 .75.75v4.493a.75.75 0 0 1-.75.75H9.325a.75.75 0 0 1-.75-.75V9.757a.75.75 0 0 1 .75-.75h5.925z">
+          </path>
+        </svg>
+      </button>
+
+      <!-- Toggle screen -->
+      <button>
+        <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16" class="Svg-sc-ytk21e-0 dYnaPI">
+          <path
+            d="M6.53 9.47a.75.75 0 0 1 0 1.06l-2.72 2.72h1.018a.75.75 0 0 1 0 1.5H1.25v-3.579a.75.75 0 0 1 1.5 0v1.018l2.72-2.72a.75.75 0 0 1 1.06 0zm2.94-2.94a.75.75 0 0 1 0-1.06l2.72-2.72h-1.018a.75.75 0 1 1 0-1.5h3.578v3.579a.75.75 0 0 1-1.5 0V3.81l-2.72 2.72a.75.75 0 0 1-1.06 0z">
+          </path>
+        </svg>
+      </button>
+    </div>
+  </footer>
+
+  <div id="about-artist-modal">
+    <div>
+      <div class="content flex flex-col">
+        <div class="band-image-container">
+          <img src="https://i.scdn.co/image/ab6761670000ecd4aa00546de6a62ce643102ffc" />
+          <button class="icon-button highlight" id="about-artist-modal-close-button">
+            <svg class="sm-icon" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16">
+              <path
+                d="M2.47 2.47a.75.75 0 0 1 1.06 0L8 6.94l4.47-4.47a.75.75 0 1 1 1.06 1.06L9.06 8l4.47 4.47a.75.75 0 1 1-1.06 1.06L8 9.06l-4.47 4.47a.75.75 0 0 1-1.06-1.06L6.94 8 2.47 3.53a.75.75 0 0 1 0-1.06Z">
+              </path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Modal -->
+        <div class="info" id="info">
+
+          <!-- Container modal -->
+          <div class="flex flex-col" id="container-modal">
+
+            <!-- Container países e redes sociais -->
+            <div id="container-info-modal" class="flex flex-col">
+              <div id="text-modal-margin">
+                <div id="text-modal-number">5.897.758</div>
+                <div class="font-14px">Seguidores</div>
+              </div>
+
+              <div id="text-modal-margin">
+                <div id="text-modal-number">14.569.025</div>
+                <div class="font-14px">Ouvintes mensais</div>
+              </div>
+
+              <div>
+                <div class="modal-countries">Jakarta, ID</div>
+                <div class="listeners-modal">508.650 ouvintes</div>
+              </div>
+
+              <div>
+                <div class="modal-countries">London, GB</div>
+                <div class="listeners-modal">257.755 ouvintes</div>
+              </div>
+
+              <div>
+                <div class="modal-countries">São Paulo, BR</div>
+                <div class="listeners-modal">192.221 ouvintes</div>
+              </div>
+
+              <div>
+                <div class="modal-countries">Sydney, AU</div>
+                <div class="listeners-modal">169.647 ouvintes</div>
+              </div>
+
+              <div>
+                <div class="modal-countries">Melbourne, AU</div>
+                <div class="listeners-modal">160.968 ouvintes</div>
+              </div>
+
+              <div id="modal-social-link">
+                <a class="button-link-modal flex" href="https://www.facebook.com/bmthofficial">
+                  <svg class="icon-modal items-center margin-rigth-4px" data-encore-id="icon" role="img"
+                    aria-hidden="true" viewBox="0 0 24 24">
+                    <path
+                      d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.093 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.563V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z">
+                    </path>
+                  </svg>
+                  Facebook</a>
+
+                <a class="button-link-modal flex" href="https://www.instagram.com/bringmethehorizon">
+                  <svg class="icon-modal items-center margin-rigth-4px" data-encore-id="icon" role="img"
+                    aria-hidden="true" viewBox="0 0 24 24">
+                    <path
+                      d="M12 3.803c2.67 0 2.986.01 4.041.059.975.044 1.504.207 1.857.344.435.16.828.416 1.151.748.332.323.588.716.748 1.151.137.353.3.882.345 1.857.047 1.055.058 1.37.058 4.041 0 2.67-.01 2.986-.058 4.041-.045.975-.208 1.505-.345 1.857A3.315 3.315 0 0 1 17.9 19.8c-.352.137-.882.3-1.856.344-1.055.048-1.371.058-4.041.058-2.67 0-2.987-.01-4.041-.058-.975-.044-1.505-.207-1.857-.344a3.096 3.096 0 0 1-1.151-.748 3.096 3.096 0 0 1-.749-1.151c-.137-.353-.3-.883-.344-1.857-.048-1.055-.058-1.371-.058-4.041 0-2.67.01-2.987.058-4.041.045-.975.207-1.505.344-1.857a3.08 3.08 0 0 1 .749-1.151 3.096 3.096 0 0 1 1.15-.749c.353-.137.883-.3 1.858-.344 1.054-.048 1.37-.058 4.04-.058H12zM12.002 2c-2.716 0-3.057.012-4.124.06-1.066.05-1.793.22-2.428.466A4.91 4.91 0 0 0 3.678 3.68a4.91 4.91 0 0 0-1.153 1.772c-.247.635-.416 1.363-.465 2.427C2.012 8.943 2 9.286 2 12.002c0 2.715.012 3.056.06 4.123.05 1.066.218 1.791.465 2.426a4.909 4.909 0 0 0 1.153 1.772c.5.508 1.105.902 1.772 1.153.635.248 1.363.417 2.428.465 1.064.049 1.407.06 4.123.06s3.056-.01 4.123-.06c1.067-.049 1.79-.217 2.426-.465a5.111 5.111 0 0 0 2.925-2.925c.247-.635.416-1.363.465-2.427.048-1.064.06-1.407.06-4.123s-.012-3.057-.06-4.123c-.05-1.067-.218-1.791-.465-2.426a4.902 4.902 0 0 0-1.153-1.771 4.91 4.91 0 0 0-1.772-1.155c-.635-.247-1.363-.416-2.428-.464-1.064-.048-1.406-.06-4.122-.06L12.002 2z">
+                    </path>
+                    <path
+                      d="M12 6.867a5.135 5.135 0 1 0 0 10.27 5.135 5.135 0 0 0 0-10.27zm0 8.47a3.334 3.334 0 1 1 0-6.67 3.334 3.334 0 0 1 0 6.67zm5.338-7.473a1.2 1.2 0 1 0 0-2.4 1.2 1.2 0 0 0 0 2.4z">
+                    </path>
+                  </svg>
+                  Instagram</a>
+
+                <a class="button-link-modal flex" href="#">
+                  <svg class="icon-modal items-center margin-rigth-4px" data-encore-id="icon" role="img"
+                    aria-hidden="true" viewBox="0 0 24 24">
+                    <path
+                      d="M20.31 5.833a4.451 4.451 0 0 0 2-2.524 8.91 8.91 0 0 1-2.894 1.107 4.487 4.487 0 0 0-1.494-1.06 4.471 4.471 0 0 0-1.827-.38c-1.254 0-2.325.444-3.214 1.333-.89.89-1.334 1.964-1.334 3.225 0 .318.04.664.12 1.037a12.713 12.713 0 0 1-5.226-1.398A12.804 12.804 0 0 1 2.298 3.81a4.49 4.49 0 0 0-.62 2.284c0 .778.181 1.5.542 2.168a4.439 4.439 0 0 0 1.482 1.62 4.31 4.31 0 0 1-2.06-.561v.06c0 1.087.346 2.047 1.036 2.88a4.457 4.457 0 0 0 2.608 1.572 4.405 4.405 0 0 1-1.191.166 5.04 5.04 0 0 1-.856-.082 4.41 4.41 0 0 0 1.594 2.25 4.417 4.417 0 0 0 2.655.904c-1.659 1.302-3.544 1.953-5.655 1.953-.365 0-.726-.024-1.083-.072C2.869 20.317 5.194 21 7.725 21c1.358 0 2.644-.18 3.858-.541 1.215-.361 2.288-.855 3.22-1.482a13.564 13.564 0 0 0 2.525-2.19 12.232 12.232 0 0 0 1.851-2.697c.484-.964.853-1.958 1.107-2.982a12.624 12.624 0 0 0 .369-3.644 9.266 9.266 0 0 0 2.262-2.345 8.9 8.9 0 0 1-2.607.714z">
+                    </path>
+                  </svg>
+                  Twitter</a>
+
+                <a class="button-link-modal flex" href="#">
+                  <svg class="icon-modal items-center margin-rigth-4px" data-encore-id="icon" role="img"
+                    aria-label="Link externo" aria-hidden="true" viewBox="0 0 24 24">
+                    <path d="M3 5a1 1 0 0 1 1-1h8v2H5v14h13v-8h2v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5z"></path>
+                    <path
+                      d="M22 2v5.95a1 1 0 1 1-2 0V5.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L18.586 4H16.05a1 1 0 0 1 0-2H22z">
+                    </path>
+                  </svg>
+                  Wikipedia</a>
+              </div>
+            </div>
+
+            <!-- Container site e publicado por -->
+            <div id="posted-by">
+              <div>
+                <p>ʙʀɪɴɢ ᴍᴇ ᴛʜᴇ ʜᴏʀɪᴢᴏɴ https://www.bmthofficial.com</p>
+                <div class="flex items-center">
+                  <div class="flex" id="figure">
+                    <svg class="sm-icon" data-encore-id="icon" role="img" aria-hidden="true" data-testid="user-icon"
+                      viewBox="0 0 16 16">
+                      <path
+                        d="M6.233.371a4.388 4.388 0 0 1 5.002 1.052c.421.459.713.992.904 1.554.143.421.263 1.173.22 1.894-.078 1.322-.638 2.408-1.399 3.316l-.127.152a.75.75 0 0 0 .201 1.13l2.209 1.275a4.75 4.75 0 0 1 2.375 4.114V16H.382v-1.143a4.75 4.75 0 0 1 2.375-4.113l2.209-1.275a.75.75 0 0 0 .201-1.13l-.126-.152c-.761-.908-1.322-1.994-1.4-3.316-.043-.721.077-1.473.22-1.894a4.346 4.346 0 0 1 .904-1.554c.411-.448.91-.807 1.468-1.052zM8 1.5a2.888 2.888 0 0 0-2.13.937 2.85 2.85 0 0 0-.588 1.022c-.077.226-.175.783-.143 1.323.054.921.44 1.712 1.051 2.442l.002.001.127.153a2.25 2.25 0 0 1-.603 3.39l-2.209 1.275A3.25 3.25 0 0 0 1.902 14.5h12.196a3.25 3.25 0 0 0-1.605-2.457l-2.209-1.275a2.25 2.25 0 0 1-.603-3.39l.127-.153.002-.001c.612-.73.997-1.52 1.052-2.442.032-.54-.067-1.097-.144-1.323a2.85 2.85 0 0 0-.588-1.022A2.888 2.888 0 0 0 8 1.5z">
+                      </path>
+                    </svg>
+                  </div>
+                  <div class="font-14px">Postado por Bring Me The Horizon</div>
+                </div>
+              </div>
+
+
+            </div>
+
+
+
+          </div>
+
+
+        </div>
+
+
+
+
+
+
+      </div>
+    </div>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
