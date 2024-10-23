@@ -1,4 +1,9 @@
-main > div.content {
+main > div.content-wrapper {
+  display: flex;
+  flex: 1;
+}
+
+main > div.content-wrapper > div.content {
   position: relative;
   flex: 1;
   max-height: calc(100vh - 88px);
@@ -8,7 +13,7 @@ main > div.content {
   overflow-x: hidden;
 }
 
-main > div.content::before {
+main > div.content-wrapper > div.content::before {
   content: "";
   position: absolute;
   top: 0;
@@ -21,7 +26,7 @@ main > div.content::before {
   z-index: 1;
 }
 
-main > div.content > header {
+main > div.content-wrapper > div.content > header {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -31,24 +36,24 @@ main > div.content > header {
   z-index: 2;
 }
 
-main > div.content > header > nav {
+main > div.content-wrapper > div.content > header > nav {
   gap: 8px;
 }
 
-main > div.content > header > nav > button.icon-button {
+main > div.content-wrapper > div.content > header > nav > button.icon-button {
   background: rgba(0, 0, 0, .7);
 }
 
-main > div.content > header > div {
+main > div.content-wrapper > div.content > header > div {
   gap: 8px;
 }
 
-main > div.content > header > div > button.icon-button {
+main > div.content-wrapper > div.content > header > div > button.icon-button {
   background: rgba(0, 0, 0, .54);
   transform: scale(1.1);
 }
 
-main > div.content > header > div > button.icon-button > span {
+main > div.content-wrapper > div.content > header > div > button.icon-button > span {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,19 +65,19 @@ main > div.content > header > div > button.icon-button > span {
   font-weight: 700;
 }
 
-main > div.content > header > div > button {
+main > div.content-wrapper > div.content > header > div > button {
   gap: 5px;
 }
 
-main > div.content > header > div > button:hover {
+main > div.content-wrapper > div.content > header > div > button:hover {
   transform: scale(1.04);
 }
 
-main > div.content > header > div > button > svg {
+main > div.content-wrapper > div.content > header > div > button > svg {
   fill: #fff;
 }
 
-main > div.content > div.sections {
+main > div.content-wrapper > div.content > div.sections {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -81,20 +86,20 @@ main > div.content > div.sections {
   padding: 0 16px;
 }
 
-main > div.content > div.sections > section > div.section-title > div > span {
+main > div.content-wrapper > div.content > div.sections > section > div.section-title > div > span {
   font-size: 12px;
 }
 
-main > div.content > div.sections > section > div.section-title > div > a {
+main > div.content-wrapper > div.content > div.sections > section > div.section-title > div > a {
   color: #fff;
   font-size: 24px;
 }
 
-main > div.content > div.sections > section > div.cards-container {
+main > div.content-wrapper > div.content > div.sections > section > div.cards-container {
   display: flex;
 }
 
-main > div.content > div.sections > section > div.cards-container > div.section-card {
+main > div.content-wrapper > div.content > div.sections > section > div.cards-container > div.section-card {
   display: flex;
   flex-direction: column;
   padding: 12px;
@@ -103,15 +108,15 @@ main > div.content > div.sections > section > div.cards-container > div.section-
   flex: 1;
 }
 
-main > div.content > div.sections > section > div.cards-container > div.section-card.fill {
+main > div.content-wrapper > div.content > div.sections > section > div.cards-container > div.section-card.fill {
   visibility: hidden;
 }
 
-main > div.content > div.sections > section > div.cards-container > div.section-card:hover {
+main > div.content-wrapper > div.content > div.sections > section > div.cards-container > div.section-card:hover {
   background: #1f1f1f;
 }
 
-main > div.content > div.sections > section > div.cards-container > div.section-card > div {
+main > div.content-wrapper > div.content > div.sections > section > div.cards-container > div.section-card > div {
   position: relative;
   padding-bottom: 100%;
   width: 100%;
@@ -120,7 +125,7 @@ main > div.content > div.sections > section > div.cards-container > div.section-
   margin-bottom: 8px;
 }
 
-main > div.content > div.sections > section > div.cards-container > div.section-card > div > img {
+main > div.content-wrapper > div.content > div.sections > section > div.cards-container > div.section-card > div > img {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -128,22 +133,22 @@ main > div.content > div.sections > section > div.cards-container > div.section-
   left: 0;
 }
 
-main > div.content > div.sections > section > div.cards-container > div.section-card > span.title {
+main > div.content-wrapper > div.content > div.sections > section > div.cards-container > div.section-card > span.title {
   color: #fff;
 }
 
-main > div.content > div.sections > section > div.cards-container > div.section-card > span.description {
+main > div.content-wrapper > div.content > div.sections > section > div.cards-container > div.section-card > span.description {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
-main > div.content > div.sections > section > div.cards-container > div.section-card > span.description > a.link:hover {
+main > div.content-wrapper > div.content > div.sections > section > div.cards-container > div.section-card > span.description > a.link:hover {
   color: inherit;
 }
 
-main > div.content > footer {
+main > div.content-wrapper > div.content > footer {
   display: flex;
   flex-direction: column;
   padding: 48px 32px 40px;
@@ -151,16 +156,16 @@ main > div.content > footer {
   gap: 40px;
 }
 
-main > div.content > footer > div {
+main > div.content-wrapper > div.content > footer > div {
   align-items: flex-start;
 }
 
-main > div.content > footer div.link-medias {
+main > div.content-wrapper > div.content > footer div.link-medias {
   gap: 16px;
   margin-left: auto;
 }
 
-main > div.content > footer div.link-medias > a.icon-button {
+main > div.content-wrapper > div.content > footer div.link-medias > a.icon-button {
   min-width: 40px;
   min-height: 40px;
   max-width: 40px;
@@ -168,32 +173,32 @@ main > div.content > footer div.link-medias > a.icon-button {
   background: #292929;
 }
 
-main > div.content > footer div.link-medias > a.icon-button:hover {
+main > div.content-wrapper > div.content > footer div.link-medias > a.icon-button:hover {
   background: #727272;
 }
 
-main > div.content > footer div.link-medias > a.icon-button > svg {
+main > div.content-wrapper > div.content > footer div.link-medias > a.icon-button > svg {
   fill: #fff;
 }
 
-main > div.content > footer > hr {
+main > div.content-wrapper > div.content > footer > hr {
   margin: 0;
   border-color: rgba(255, 255, 255, 0.1);
 }
 
-main > div.content > footer > div.more-links {
+main > div.content-wrapper > div.content > footer > div.more-links {
   display: flex;
   align-items: center;
 }
 
-main > div.content > footer > div.more-links > div:first-child {
+main > div.content-wrapper > div.content > footer > div.more-links > div:first-child {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
   font-size: 14px;
 }
 
-main > div.content > footer > div.more-links > div:last-child {
+main > div.content-wrapper > div.content > footer > div.more-links > div:last-child {
   white-space: nowrap;
   margin-left: auto;
 }

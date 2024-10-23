@@ -49,6 +49,8 @@
   <link rel="stylesheet" href="left-sidebar.css">
   <link rel="stylesheet" href="content.css">
   <link rel="stylesheet" href="about-artist-modal.css">
+  <link rel="stylesheet" href="modal-credits.css">
+  <link rel="stylesheet" href="playlist.css">
 </head>
 
 <body>
@@ -269,296 +271,351 @@
     </div>
 
     <!-- Content center -->
-    <div class="content">
-      <header>
-        <nav class="flex">
-          <button class="icon-button">
-            <svg class="sm-icon" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16">
-              <path
-                d="M11.03.47a.75.75 0 0 1 0 1.06L4.56 8l6.47 6.47a.75.75 0 1 1-1.06 1.06L2.44 8 9.97.47a.75.75 0 0 1 1.06 0z">
-              </path>
-            </svg>
-          </button>
-          <button class="icon-button">
-            <svg class="sm-icon" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16">
-              <path
-                d="M4.97.47a.75.75 0 0 0 0 1.06L11.44 8l-6.47 6.47a.75.75 0 1 0 1.06 1.06L13.56 8 6.03.47a.75.75 0 0 0-1.06 0z">
-              </path>
-            </svg>
-          </button>
-        </nav>
-        <div class="flex items-center">
-          <button class="button-white">Ver planos Premium</button>
-          <button class="button-black">
-            <svg class="sm-icon" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16">
-              <path
-                d="M4.995 8.745a.75.75 0 0 1 1.06 0L7.25 9.939V4a.75.75 0 0 1 1.5 0v5.94l1.195-1.195a.75.75 0 1 1 1.06 1.06L8 12.811l-.528-.528a.945.945 0 0 1-.005-.005L4.995 9.805a.75.75 0 0 1 0-1.06z">
-              </path>
-              <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13z"></path>
-            </svg>
-            Instalar aplicativo
-          </button>
-          <button class="icon-button">
-            <svg class="sm-icon" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16">
-              <path
-                d="M8 1.5a4 4 0 0 0-4 4v3.27a.75.75 0 0 1-.1.373L2.255 12h11.49L12.1 9.142a.75.75 0 0 1-.1-.374V5.5a4 4 0 0 0-4-4zm-5.5 4a5.5 5.5 0 0 1 11 0v3.067l2.193 3.809a.75.75 0 0 1-.65 1.124H10.5a2.5 2.5 0 0 1-5 0H.957a.75.75 0 0 1-.65-1.124L2.5 8.569V5.5zm4.5 8a1 1 0 1 0 2 0H7z">
-              </path>
-            </svg>
-          </button>
-          <button class="icon-button">
-            <span>E</span>
-          </button>
+    <div class="content-wrapper">
+      <div class="content">
+        <header>
+          <nav class="flex">
+            <button class="icon-button">
+              <svg class="sm-icon" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16">
+                <path
+                  d="M11.03.47a.75.75 0 0 1 0 1.06L4.56 8l6.47 6.47a.75.75 0 1 1-1.06 1.06L2.44 8 9.97.47a.75.75 0 0 1 1.06 0z">
+                </path>
+              </svg>
+            </button>
+            <button class="icon-button">
+              <svg class="sm-icon" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16">
+                <path
+                  d="M4.97.47a.75.75 0 0 0 0 1.06L11.44 8l-6.47 6.47a.75.75 0 1 0 1.06 1.06L13.56 8 6.03.47a.75.75 0 0 0-1.06 0z">
+                </path>
+              </svg>
+            </button>
+          </nav>
+          <div class="flex items-center">
+            <button class="button-white">Ver planos Premium</button>
+            <button class="button-black">
+              <svg class="sm-icon" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16">
+                <path
+                  d="M4.995 8.745a.75.75 0 0 1 1.06 0L7.25 9.939V4a.75.75 0 0 1 1.5 0v5.94l1.195-1.195a.75.75 0 1 1 1.06 1.06L8 12.811l-.528-.528a.945.945 0 0 1-.005-.005L4.995 9.805a.75.75 0 0 1 0-1.06z">
+                </path>
+                <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13z"></path>
+              </svg>
+              Instalar aplicativo
+            </button>
+            <button class="icon-button">
+              <svg class="sm-icon" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16">
+                <path
+                  d="M8 1.5a4 4 0 0 0-4 4v3.27a.75.75 0 0 1-.1.373L2.255 12h11.49L12.1 9.142a.75.75 0 0 1-.1-.374V5.5a4 4 0 0 0-4-4zm-5.5 4a5.5 5.5 0 0 1 11 0v3.067l2.193 3.809a.75.75 0 0 1-.65 1.124H10.5a2.5 2.5 0 0 1-5 0H.957a.75.75 0 0 1-.65-1.124L2.5 8.569V5.5zm4.5 8a1 1 0 1 0 2 0H7z">
+                </path>
+              </svg>
+            </button>
+            <button class="icon-button">
+              <span>E</span>
+            </button>
+          </div>
+        </header>
+
+        <div class="sections">
+          <section class="flex flex-col">
+            <div class="section-title flex justify-space-between items-center">
+              <div class="flex flex-col">
+                <a href="#" class="font-title link">Feito para Edy Rodrigues</a>
+              </div>
+              <a href="#" class="link text-gray font-bold">Mostrar tudo</a>
+            </div>
+
+            <div class="cards-container">
+              <div class="section-card">
+                <div>
+                  <img
+                    src="https://dailymix-images.scdn.co/v2/img/ab6761610000e5eb5c3349ddba6b8e064c1bab16/1/pt/default" />
+                </div>
+                <span class="description">Avril Lavigne, Deorro, Pitbull e mais</span>
+              </div>
+
+              <div class="section-card">
+                <div>
+                  <img
+                    src="https://dailymix-images.scdn.co/v2/img/ab6761610000e5eb95937743bc43f4408033e7c6/2/pt/default" />
+                </div>
+                <span class="description">Chemical Surf, Liu, Vegas (Brazil) e mais</span>
+              </div>
+
+              <div class="section-card">
+                <div>
+                  <img
+                    src="https://dailymix-images.scdn.co/v2/img/ab6761610000e5eb95937743bc43f4408033e7c6/3/pt/default" />
+                </div>
+                <span class="description">Chemical Surf, Liu, Vegas (Brazil) e mais</span>
+              </div>
+
+              <div class="section-card">
+                <div>
+                  <img
+                    src="https://dailymix-images.scdn.co/v2/img/ab6761610000e5eba00b11c129b27a88fc72f36b/4/pt/default" />
+                </div>
+                <span class="description">Eminem, Chris Brown, Wiz Khalifa e mais</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="flex flex-col">
+            <div class="section-title flex justify-space-between items-center">
+              <div class="flex flex-col">
+                <a href="#" class="font-title link">Seus mixes mais ouvidos</a>
+              </div>
+              <a href="#" class="link text-gray font-bold">Mostrar tudo</a>
+            </div>
+
+            <div class="cards-container">
+              <div class="section-card">
+                <div>
+                  <img src="https://seed-mix-image.spotifycdn.com/v6/img/artist/1Ffb6ejR6Fe5IamqA5oRUF/pt/default" />
+                </div>
+                <span class="description"><a href="#" class="link text-gray">Architects</a>, <a href="#"
+                    class="link text-gray">A Day To Remember</a> e <a href="#" class="link text-gray">Bullet...</a>
+                </span>
+              </div>
+
+              <div class="section-card">
+                <div>
+                  <img src="https://seed-mix-image.spotifycdn.com/v6/img/punk/0p4nmQO2msCgU4IF37Wi3j/pt/default" />
+                </div>
+                <span class="description"><a href="#" class="link text-gray">Avril Lavigne</a>, <a href="#"
+                    class="link text-gray">Green Day</a> e mais</span>
+              </div>
+
+              <div class="section-card">
+                <div>
+                  <img src="https://seed-mix-image.spotifycdn.com/v6/img/upbeat/2DlGxzQSjYe5N6G9nkYghR/pt/default" />
+                </div>
+                <span class="description"><a href="#" class="link text-gray">Jennifer Lopes</a>, <a href="#"
+                    class="link text-gray">USHER</a>, <a href="#" class="link text-gray">P!nk</a> e mais</span>
+              </div>
+
+              <div class="section-card">
+                <div>
+                  <img src="https://seed-mix-image.spotifycdn.com/v6/img/artist/6XyY86QOPPrYVGvF9ch6wz/pt/default" />
+                </div>
+                <span class="description"><a href="#" class="link text-gray">Bring Me The Horizon</a>, <a href="#"
+                    class="link text-gray">Green Day</a> e mais</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="flex flex-col">
+            <div class="section-title flex justify-space-between items-center">
+              <div class="flex flex-col">
+                <a href="#" class="font-title link">Tocados recentemente</a>
+              </div>
+              <a href="#" class="link text-gray font-bold">Mostrar tudo</a>
+            </div>
+
+            <div class="cards-container">
+              <div class="section-card">
+                <div>
+                  <img
+                    src="https://mosaic.scdn.co/300/ab67616d00001e02413697269620e16f4466f543ab67616d00001e0260cf7c8dd93815ccd6cb4830ab67616d00001e027c2b1dc1639152beaeadf00dab67616d00001e02ab0b0448520d99ff0aa7b1eb" />
+                </div>
+                <span class="title">2005 - 2014</span>
+                <span class="description">De Edy Rodrigues</span>
+              </div>
+
+              <div class="section-card">
+                <div>
+                  <img src="https://i.scdn.co/image/ab67616d00001e029c291af4bf0c3071847f2b80" />
+                </div>
+                <span class="title">Under My Skin</span>
+                <span class="description"><a href="#" class="link text-gray">Avril Lavigne</a></span>
+              </div>
+
+              <div class="section-card">
+                <div>
+                  <img src="https://i.scdn.co/image/ab67616d00001e02413697269620e16f4466f543" />
+                </div>
+                <span class="description"><a href="#" class="link text-gray">Jennifer Lopes</a>, <a href="#"
+                    class="link text-gray">USHER</a>, <a href="#" class="link text-gray">P!nk</a> e mais</span>
+              </div>
+
+              <div class="section-card fill"></div>
+            </div>
+          </section>
+
+          <section class="flex flex-col">
+            <div class="section-title flex justify-space-between items-center">
+              <div class="flex flex-col">
+                <span>Inspirado na sua atividade recente</span>
+                <a href="#" class="font-title link">Com base no que você ouviu recentemente</a>
+              </div>
+              <a href="#" class="link text-gray font-bold">Mostrar tudo</a>
+            </div>
+
+            <div class="cards-container">
+              <div class="section-card">
+                <div>
+                  <img src="https://i.scdn.co/image/ab67706f0000000254faa65c795bfb2902106094" />
+                </div>
+                <span class="description">Relembre e descubra grandes sucessos em 2005. Foto: Pussycat Dolls</span>
+              </div>
+
+              <div class="section-card">
+                <div>
+                  <img src="https://i.scdn.co/image/ab67706f000000023e56ec6cc663723d73617d61" />
+                </div>
+                <span class="description"><a href="#" class="link text-gray">Relembre e descubra grandes sucessos em
+                    2002.
+                    Foto: Nelly</a></span>
+              </div>
+
+              <div class="section-card">
+                <div>
+                  <img src="https://i.scdn.co/image/ab67706f00000002e2d544ca628ce77d96987382" />
+                </div>
+                <span class="description">Relembre e descubra grandes sucessos em 2008. Foto: Rihanna</span>
+              </div>
+
+              <div class="section-card">
+                <div>
+                  <img src="https://i.scdn.co/image/ab67706f000000029bcc934fd810adc4a1e7c811" />
+                </div>
+                <span class="description">Relembre e descubra grandes sucessos em 2013. Foto: Bruno Mars</span>
+              </div>
+            </div>
+          </section>
         </div>
-      </header>
 
-      <div class="sections">
-        <section class="flex flex-col">
-          <div class="section-title flex justify-space-between items-center">
-            <div class="flex flex-col">
-              <a href="#" class="font-title link">Feito para Edy Rodrigues</a>
-            </div>
-            <a href="#" class="link text-gray font-bold">Mostrar tudo</a>
-          </div>
-
-          <div class="cards-container">
-            <div class="section-card">
-              <div>
-                <img
-                  src="https://dailymix-images.scdn.co/v2/img/ab6761610000e5eb5c3349ddba6b8e064c1bab16/1/pt/default" />
-              </div>
-              <span class="description">Avril Lavigne, Deorro, Pitbull e mais</span>
+        <footer>
+          <div class="flex gap-8px">
+            <div class="flex flex-col gap-8px">
+              <span class="font-bold text-white">Empresa</span>
+              <a href="#" class="link text-gray">Sobre</a>
+              <a href="#" class="link text-gray">Empregos</a>
+              <a href="#" class="link text-gray">For the Record</a>
             </div>
 
-            <div class="section-card">
-              <div>
-                <img
-                  src="https://dailymix-images.scdn.co/v2/img/ab6761610000e5eb95937743bc43f4408033e7c6/2/pt/default" />
-              </div>
-              <span class="description">Chemical Surf, Liu, Vegas (Brazil) e mais</span>
+            <div class="flex flex-col gap-8px">
+              <span class="font-bold text-white">Comunidades</span>
+              <a href="#" class="link text-gray">Para Artistas</a>
+              <a href="#" class="link text-gray">Desenvolvedores</a>
+              <a href="#" class="link text-gray">Publicidade</a>
+              <a href="#" class="link text-gray">Investidores</a>
+              <a href="#" class="link text-gray">Fornecedores</a>
             </div>
 
-            <div class="section-card">
-              <div>
-                <img
-                  src="https://dailymix-images.scdn.co/v2/img/ab6761610000e5eb95937743bc43f4408033e7c6/3/pt/default" />
-              </div>
-              <span class="description">Chemical Surf, Liu, Vegas (Brazil) e mais</span>
+            <div class="flex flex-col gap-8px">
+              <span class="font-bold text-white">Link úteis</span>
+              <a href="#" class="link text-gray">Suporte</a>
+              <a href="#" class="link text-gray">Aplicativo móvel grátis</a>
             </div>
 
-            <div class="section-card">
-              <div>
-                <img
-                  src="https://dailymix-images.scdn.co/v2/img/ab6761610000e5eba00b11c129b27a88fc72f36b/4/pt/default" />
-              </div>
-              <span class="description">Eminem, Chris Brown, Wiz Khalifa e mais</span>
-            </div>
-          </div>
-        </section>
-
-        <section class="flex flex-col">
-          <div class="section-title flex justify-space-between items-center">
-            <div class="flex flex-col">
-              <a href="#" class="font-title link">Seus mixes mais ouvidos</a>
-            </div>
-            <a href="#" class="link text-gray font-bold">Mostrar tudo</a>
-          </div>
-
-          <div class="cards-container">
-            <div class="section-card">
-              <div>
-                <img src="https://seed-mix-image.spotifycdn.com/v6/img/artist/1Ffb6ejR6Fe5IamqA5oRUF/pt/default" />
-              </div>
-              <span class="description"><a href="#" class="link text-gray">Architects</a>, <a href="#"
-                  class="link text-gray">A Day To Remember</a> e <a href="#" class="link text-gray">Bullet...</a>
-              </span>
+            <div class="flex flex-col gap-8px">
+              <span class="font-bold text-white">Planos do Spotify</span>
+              <a href="#" class="link text-gray">Premium Individual</a>
+              <a href="#" class="link text-gray">Premium Duo</a>
+              <a href="#" class="link text-gray">Premium Família</a>
+              <a href="#" class="link text-gray">Premium Universitário</a>
+              <a href="#" class="link text-gray">Spotify Free</a>
             </div>
 
-            <div class="section-card">
-              <div>
-                <img src="https://seed-mix-image.spotifycdn.com/v6/img/punk/0p4nmQO2msCgU4IF37Wi3j/pt/default" />
-              </div>
-              <span class="description"><a href="#" class="link text-gray">Avril Lavigne</a>, <a href="#"
-                  class="link text-gray">Green Day</a> e mais</span>
-            </div>
+            <div class="link-medias flex items-center">
+              <a href="https://instagram.com/spotify" target="_blank" class="icon-button">
+                <svg class="sm-icon fill-white" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16">
+                  <path
+                    d="M8 1.44c2.136 0 2.389.009 3.233.047.78.036 1.203.166 1.485.276.348.128.663.332.921.598.266.258.47.573.599.921.11.282.24.706.275 1.485.039.844.047 1.097.047 3.233s-.008 2.389-.047 3.232c-.035.78-.166 1.204-.275 1.486a2.654 2.654 0 0 1-1.518 1.518c-.282.11-.706.24-1.486.275-.843.039-1.097.047-3.233.047s-2.39-.008-3.232-.047c-.78-.035-1.204-.165-1.486-.275a2.477 2.477 0 0 1-.921-.599 2.477 2.477 0 0 1-.599-.92c-.11-.282-.24-.706-.275-1.486-.038-.844-.047-1.096-.047-3.232s.009-2.39.047-3.233c.036-.78.166-1.203.275-1.485.129-.348.333-.663.599-.921a2.49 2.49 0 0 1 .92-.599c.283-.11.707-.24 1.487-.275.843-.038 1.096-.047 3.232-.047L8 1.441zm.001-1.442c-2.172 0-2.445.01-3.298.048-.854.04-1.435.176-1.943.373a3.928 3.928 0 0 0-1.417.923c-.407.4-.722.883-.923 1.417-.198.508-.333 1.09-.372 1.942C.01 5.552 0 5.826 0 8c0 2.172.01 2.445.048 3.298.04.853.174 1.433.372 1.941.2.534.516 1.017.923 1.417.4.407.883.722 1.417.923.508.198 1.09.333 1.942.372.852.039 1.126.048 3.299.048 2.172 0 2.445-.01 3.298-.048.853-.04 1.433-.174 1.94-.372a4.087 4.087 0 0 0 2.34-2.34c.199-.508.334-1.09.373-1.942.039-.851.048-1.125.048-3.298s-.01-2.445-.048-3.298c-.04-.853-.174-1.433-.372-1.94a3.924 3.924 0 0 0-.923-1.418A3.928 3.928 0 0 0 13.24.42c-.508-.197-1.09-.333-1.942-.371-.851-.041-1.125-.05-3.298-.05l.001-.001z">
+                  </path>
+                  <path
+                    d="M8 3.892a4.108 4.108 0 1 0 0 8.216 4.108 4.108 0 0 0 0-8.216zm0 6.775a2.668 2.668 0 1 1 0-5.335 2.668 2.668 0 0 1 0 5.335zm4.27-5.978a.96.96 0 1 0 0-1.92.96.96 0 0 0 0 1.92z">
+                  </path>
+                </svg>
+              </a>
 
-            <div class="section-card">
-              <div>
-                <img src="https://seed-mix-image.spotifycdn.com/v6/img/upbeat/2DlGxzQSjYe5N6G9nkYghR/pt/default" />
-              </div>
-              <span class="description"><a href="#" class="link text-gray">Jennifer Lopes</a>, <a href="#"
-                  class="link text-gray">USHER</a>, <a href="#" class="link text-gray">P!nk</a> e mais</span>
-            </div>
+              <a href="https://x.com/spotify?mx=2" class="icon-button" target="_blank">
+                <svg class="sm-icon" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16">
+                  <path
+                    d="M13.54 3.889a2.968 2.968 0 0 0 1.333-1.683 5.937 5.937 0 0 1-1.929.738 2.992 2.992 0 0 0-.996-.706 2.98 2.98 0 0 0-1.218-.254 2.92 2.92 0 0 0-2.143.889 2.929 2.929 0 0 0-.889 2.15c0 .212.027.442.08.691a8.475 8.475 0 0 1-3.484-.932A8.536 8.536 0 0 1 1.532 2.54a2.993 2.993 0 0 0-.413 1.523c0 .519.12 1 .361 1.445.24.445.57.805.988 1.08a2.873 2.873 0 0 1-1.373-.374v.04c0 .725.23 1.365.69 1.92a2.97 2.97 0 0 0 1.739 1.048 2.937 2.937 0 0 1-1.365.056 2.94 2.94 0 0 0 1.063 1.5 2.945 2.945 0 0 0 1.77.603 5.944 5.944 0 0 1-3.77 1.302c-.243 0-.484-.016-.722-.048A8.414 8.414 0 0 0 5.15 14c.905 0 1.763-.12 2.572-.361.81-.24 1.526-.57 2.147-.988a9.044 9.044 0 0 0 1.683-1.46c.5-.556.911-1.155 1.234-1.798a9.532 9.532 0 0 0 .738-1.988 8.417 8.417 0 0 0 .246-2.429 6.177 6.177 0 0 0 1.508-1.563c-.56.249-1.14.407-1.738.476z">
+                  </path>
+                </svg>
+              </a>
 
-            <div class="section-card">
-              <div>
-                <img src="https://seed-mix-image.spotifycdn.com/v6/img/artist/6XyY86QOPPrYVGvF9ch6wz/pt/default" />
-              </div>
-              <span class="description"><a href="#" class="link text-gray">Bring Me The Horizon</a>, <a href="#"
-                  class="link text-gray">Green Day</a> e mais</span>
+              <a href="https://web.facebook.com/SpotifyBrasil/?brand_redir=6243987495" class="icon-button"
+                target="_blank">
+                <svg class="sm-icon" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16">
+                  <path
+                    d="M16 8a8 8 0 1 0-9.25 7.903v-5.59H4.719V8H6.75V6.237c0-2.005 1.194-3.112 3.022-3.112.875 0 1.79.156 1.79.156V5.25h-1.008c-.994 0-1.304.617-1.304 1.25V8h2.219l-.355 2.313H9.25v5.59A8.002 8.002 0 0 0 16 8z">
+                  </path>
+                </svg>
+              </a>
             </div>
           </div>
-        </section>
 
-        <section class="flex flex-col">
-          <div class="section-title flex justify-space-between items-center">
-            <div class="flex flex-col">
-              <a href="#" class="font-title link">Tocados recentemente</a>
+          <hr />
+
+          <div class="more-links">
+            <div>
+              <a href="#" class="link text-gray">Legal</a>
+              <a href="#" class="link text-gray">Segurança e Centro de privacidade</a>
+              <a href="#" class="link text-gray">Política de privacidade</a>
+              <a href="#" class="link text-gray">Cookies</a>
+              <a href="#" class="link text-gray">Sobre anúncios</a>
+              <a href="#" class="link text-gray">Acessibilidade</a>
             </div>
-            <a href="#" class="link text-gray font-bold">Mostrar tudo</a>
-          </div>
-
-          <div class="cards-container">
-            <div class="section-card">
-              <div>
-                <img
-                  src="https://mosaic.scdn.co/300/ab67616d00001e02413697269620e16f4466f543ab67616d00001e0260cf7c8dd93815ccd6cb4830ab67616d00001e027c2b1dc1639152beaeadf00dab67616d00001e02ab0b0448520d99ff0aa7b1eb" />
-              </div>
-              <span class="title">2005 - 2014</span>
-              <span class="description">De Edy Rodrigues</span>
-            </div>
-
-            <div class="section-card">
-              <div>
-                <img src="https://i.scdn.co/image/ab67616d00001e029c291af4bf0c3071847f2b80" />
-              </div>
-              <span class="title">Under My Skin</span>
-              <span class="description"><a href="#" class="link text-gray">Avril Lavigne</a></span>
-            </div>
-
-            <div class="section-card">
-              <div>
-                <img src="https://i.scdn.co/image/ab67616d00001e02413697269620e16f4466f543" />
-              </div>
-              <span class="description"><a href="#" class="link text-gray">Jennifer Lopes</a>, <a href="#"
-                  class="link text-gray">USHER</a>, <a href="#" class="link text-gray">P!nk</a> e mais</span>
-            </div>
-
-            <div class="section-card fill"></div>
-          </div>
-        </section>
-
-        <section class="flex flex-col">
-          <div class="section-title flex justify-space-between items-center">
-            <div class="flex flex-col">
-              <span>Inspirado na sua atividade recente</span>
-              <a href="#" class="font-title link">Com base no que você ouviu recentemente</a>
-            </div>
-            <a href="#" class="link text-gray font-bold">Mostrar tudo</a>
-          </div>
-
-          <div class="cards-container">
-            <div class="section-card">
-              <div>
-                <img src="https://i.scdn.co/image/ab67706f0000000254faa65c795bfb2902106094" />
-              </div>
-              <span class="description">Relembre e descubra grandes sucessos em 2005. Foto: Pussycat Dolls</span>
-            </div>
-
-            <div class="section-card">
-              <div>
-                <img src="https://i.scdn.co/image/ab67706f000000023e56ec6cc663723d73617d61" />
-              </div>
-              <span class="description"><a href="#" class="link text-gray">Relembre e descubra grandes sucessos em 2002.
-                  Foto: Nelly</a></span>
-            </div>
-
-            <div class="section-card">
-              <div>
-                <img src="https://i.scdn.co/image/ab67706f00000002e2d544ca628ce77d96987382" />
-              </div>
-              <span class="description">Relembre e descubra grandes sucessos em 2008. Foto: Rihanna</span>
-            </div>
-
-            <div class="section-card">
-              <div>
-                <img src="https://i.scdn.co/image/ab67706f000000029bcc934fd810adc4a1e7c811" />
-              </div>
-              <span class="description">Relembre e descubra grandes sucessos em 2013. Foto: Bruno Mars</span>
+            <div>
+              © 2024 Spotify AB
             </div>
           </div>
-        </section>
+        </footer>
       </div>
 
-      <footer>
-        <div class="flex gap-8px">
-          <div class="flex flex-col gap-8px">
-            <span class="font-bold text-white">Empresa</span>
-            <a href="#" class="link text-gray">Sobre</a>
-            <a href="#" class="link text-gray">Empregos</a>
-            <a href="#" class="link text-gray">For the Record</a>
+      <div class="content-playlist none">
+        <div class="info-playlist">
+          <div>
+            <img
+              src="https://mosaic.scdn.co/300/ab67616d00001e02413697269620e16f4466f543ab67616d00001e0260cf7c8dd93815ccd6cb4830ab67616d00001e027c2b1dc1639152beaeadf00dab67616d00001e02ab0b0448520d99ff0aa7b1eb">
           </div>
-
-          <div class="flex flex-col gap-8px">
-            <span class="font-bold text-white">Comunidades</span>
-            <a href="#" class="link text-gray">Para Artistas</a>
-            <a href="#" class="link text-gray">Desenvolvedores</a>
-            <a href="#" class="link text-gray">Publicidade</a>
-            <a href="#" class="link text-gray">Investidores</a>
-            <a href="#" class="link text-gray">Fornecedores</a>
+          <span>Playlist</span>
+          <span>
+            <h1>2005-2014</h1>
+          </span>
+          <div>
+            <span>
+              <a class="button-link" href="#">
+                Edy Rodrigues
+              </a>
+            </span>
           </div>
-
-          <div class="flex flex-col gap-8px">
-            <span class="font-bold text-white">Link úteis</span>
-            <a href="#" class="link text-gray">Suporte</a>
-            <a href="#" class="link text-gray">Aplicativo móvel grátis</a>
-          </div>
-
-          <div class="flex flex-col gap-8px">
-            <span class="font-bold text-white">Planos do Spotify</span>
-            <a href="#" class="link text-gray">Premium Individual</a>
-            <a href="#" class="link text-gray">Premium Duo</a>
-            <a href="#" class="link text-gray">Premium Família</a>
-            <a href="#" class="link text-gray">Premium Universitário</a>
-            <a href="#" class="link text-gray">Spotify Free</a>
-          </div>
-
-          <div class="link-medias flex items-center">
-            <a href="https://instagram.com/spotify" target="_blank" class="icon-button">
-              <svg class="sm-icon fill-white" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16">
-                <path
-                  d="M8 1.44c2.136 0 2.389.009 3.233.047.78.036 1.203.166 1.485.276.348.128.663.332.921.598.266.258.47.573.599.921.11.282.24.706.275 1.485.039.844.047 1.097.047 3.233s-.008 2.389-.047 3.232c-.035.78-.166 1.204-.275 1.486a2.654 2.654 0 0 1-1.518 1.518c-.282.11-.706.24-1.486.275-.843.039-1.097.047-3.233.047s-2.39-.008-3.232-.047c-.78-.035-1.204-.165-1.486-.275a2.477 2.477 0 0 1-.921-.599 2.477 2.477 0 0 1-.599-.92c-.11-.282-.24-.706-.275-1.486-.038-.844-.047-1.096-.047-3.232s.009-2.39.047-3.233c.036-.78.166-1.203.275-1.485.129-.348.333-.663.599-.921a2.49 2.49 0 0 1 .92-.599c.283-.11.707-.24 1.487-.275.843-.038 1.096-.047 3.232-.047L8 1.441zm.001-1.442c-2.172 0-2.445.01-3.298.048-.854.04-1.435.176-1.943.373a3.928 3.928 0 0 0-1.417.923c-.407.4-.722.883-.923 1.417-.198.508-.333 1.09-.372 1.942C.01 5.552 0 5.826 0 8c0 2.172.01 2.445.048 3.298.04.853.174 1.433.372 1.941.2.534.516 1.017.923 1.417.4.407.883.722 1.417.923.508.198 1.09.333 1.942.372.852.039 1.126.048 3.299.048 2.172 0 2.445-.01 3.298-.048.853-.04 1.433-.174 1.94-.372a4.087 4.087 0 0 0 2.34-2.34c.199-.508.334-1.09.373-1.942.039-.851.048-1.125.048-3.298s-.01-2.445-.048-3.298c-.04-.853-.174-1.433-.372-1.94a3.924 3.924 0 0 0-.923-1.418A3.928 3.928 0 0 0 13.24.42c-.508-.197-1.09-.333-1.942-.371-.851-.041-1.125-.05-3.298-.05l.001-.001z">
-                </path>
-                <path
-                  d="M8 3.892a4.108 4.108 0 1 0 0 8.216 4.108 4.108 0 0 0 0-8.216zm0 6.775a2.668 2.668 0 1 1 0-5.335 2.668 2.668 0 0 1 0 5.335zm4.27-5.978a.96.96 0 1 0 0-1.92.96.96 0 0 0 0 1.92z">
-                </path>
-              </svg>
-            </a>
-
-            <a href="#" class="icon-button">
-              <svg class="sm-icon" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16">
-                <path
-                  d="M13.54 3.889a2.968 2.968 0 0 0 1.333-1.683 5.937 5.937 0 0 1-1.929.738 2.992 2.992 0 0 0-.996-.706 2.98 2.98 0 0 0-1.218-.254 2.92 2.92 0 0 0-2.143.889 2.929 2.929 0 0 0-.889 2.15c0 .212.027.442.08.691a8.475 8.475 0 0 1-3.484-.932A8.536 8.536 0 0 1 1.532 2.54a2.993 2.993 0 0 0-.413 1.523c0 .519.12 1 .361 1.445.24.445.57.805.988 1.08a2.873 2.873 0 0 1-1.373-.374v.04c0 .725.23 1.365.69 1.92a2.97 2.97 0 0 0 1.739 1.048 2.937 2.937 0 0 1-1.365.056 2.94 2.94 0 0 0 1.063 1.5 2.945 2.945 0 0 0 1.77.603 5.944 5.944 0 0 1-3.77 1.302c-.243 0-.484-.016-.722-.048A8.414 8.414 0 0 0 5.15 14c.905 0 1.763-.12 2.572-.361.81-.24 1.526-.57 2.147-.988a9.044 9.044 0 0 0 1.683-1.46c.5-.556.911-1.155 1.234-1.798a9.532 9.532 0 0 0 .738-1.988 8.417 8.417 0 0 0 .246-2.429 6.177 6.177 0 0 0 1.508-1.563c-.56.249-1.14.407-1.738.476z">
-                </path>
-              </svg>
-            </a>
-
-            <a href="#" class="icon-button">
-              <svg class="sm-icon" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16">
-                <path
-                  d="M16 8a8 8 0 1 0-9.25 7.903v-5.59H4.719V8H6.75V6.237c0-2.005 1.194-3.112 3.022-3.112.875 0 1.79.156 1.79.156V5.25h-1.008c-.994 0-1.304.617-1.304 1.25V8h2.219l-.355 2.313H9.25v5.59A8.002 8.002 0 0 0 16 8z">
-                </path>
-              </svg>
-            </a>
+          <span>•</span>
+          <span>1 salvamento</span>
+          <span>•</span>
+          <div>
+            <span>119 músicas</span>
+            <span>,</span>
+            <span>cerca de 7h 30min</span>
           </div>
         </div>
-
-        <hr />
-
-        <div class="more-links">
+        <div class="lista-de-músicas">
           <div>
-            <a href="#" class="link text-gray">Legal</a>
-            <a href="#" class="link text-gray">Segurança e Centro de privacidade</a>
-            <a href="#" class="link text-gray">Política de privacidade</a>
-            <a href="#" class="link text-gray">Cookies</a>
-            <a href="#" class="link text-gray">Sobre anúncios</a>
-            <a href="#" class="link text-gray">Acessibilidade</a>
-          </div>
-          <div>
-            © 2024 Spotify AB
+            <div>
+              <button class="button-base">
+                <svg class="icon" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path>
+                </svg>
+              </button>
+              <button class="button-base">
+                <svg class="icon" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24"><path d="M11.999 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zm-11 9c0-6.075 4.925-11 11-11s11 4.925 11 11-4.925 11-11 11-11-4.925-11-11z"></path><path d="M17.999 12a1 1 0 0 1-1 1h-4v4a1 1 0 1 1-2 0v-4h-4a1 1 0 1 1 0-2h4V7a1 1 0 1 1 2 0v4h4a1 1 0 0 1 1 1z"></path></svg>
+              </button>
+              <button class="button-base">
+                <svg class="icon" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24"><path d="M4.5 13.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm15 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm-7.5 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path></svg>
+              </button>
+              <button class="button-base">
+                <span>Lista</span>
+                <svg class="icon" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16"><path d="M15 14.5H5V13h10v1.5zm0-5.75H5v-1.5h10v1.5zM15 3H5V1.5h10V3zM3 3H1V1.5h2V3zm0 11.5H1V13h2v1.5zm0-5.75H1v-1.5h2v1.5z"></path>
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
-      </footer>
+      </div>
     </div>
+    </div>
+
 
     <!-- Right sidebar -->
     <div class="right-sidebar">
@@ -623,7 +680,7 @@
         <div class="card">
           <div class="flex justify-space-between items-center">
             <span class="font-title text-white">Créditos</span>
-            <button class="button-link">Mostrar tudo</button>
+            <button id="about-credits-button" class="button-link">Mostrar tudo</button>
           </div>
 
           <div class="flex items-center">
@@ -922,8 +979,8 @@
               </div>
 
               <div id="modal-social-link">
-                <a class="button-link-modal flex" href="https://www.facebook.com/bmthofficial">
-                  <svg class="icon-modal items-center margin-rigth-4px" data-encore-id="icon" role="img"
+                <a class="button-link-modal flex" href="https://www.facebook.com/bmthofficial" target="_blank">
+                  <svg class="icon-modal items-center margin-right-4px" data-encore-id="icon" role="img"
                     aria-hidden="true" viewBox="0 0 24 24">
                     <path
                       d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.093 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.563V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z">
@@ -931,8 +988,8 @@
                   </svg>
                   Facebook</a>
 
-                <a class="button-link-modal flex" href="https://www.instagram.com/bringmethehorizon">
-                  <svg class="icon-modal items-center margin-rigth-4px" data-encore-id="icon" role="img"
+                <a class="button-link-modal flex" href="https://www.instagram.com/bringmethehorizon" target="_blank">
+                  <svg class="icon-modal items-center margin-right-4px" data-encore-id="icon" role="img"
                     aria-hidden="true" viewBox="0 0 24 24">
                     <path
                       d="M12 3.803c2.67 0 2.986.01 4.041.059.975.044 1.504.207 1.857.344.435.16.828.416 1.151.748.332.323.588.716.748 1.151.137.353.3.882.345 1.857.047 1.055.058 1.37.058 4.041 0 2.67-.01 2.986-.058 4.041-.045.975-.208 1.505-.345 1.857A3.315 3.315 0 0 1 17.9 19.8c-.352.137-.882.3-1.856.344-1.055.048-1.371.058-4.041.058-2.67 0-2.987-.01-4.041-.058-.975-.044-1.505-.207-1.857-.344a3.096 3.096 0 0 1-1.151-.748 3.096 3.096 0 0 1-.749-1.151c-.137-.353-.3-.883-.344-1.857-.048-1.055-.058-1.371-.058-4.041 0-2.67.01-2.987.058-4.041.045-.975.207-1.505.344-1.857a3.08 3.08 0 0 1 .749-1.151 3.096 3.096 0 0 1 1.15-.749c.353-.137.883-.3 1.858-.344 1.054-.048 1.37-.058 4.04-.058H12zM12.002 2c-2.716 0-3.057.012-4.124.06-1.066.05-1.793.22-2.428.466A4.91 4.91 0 0 0 3.678 3.68a4.91 4.91 0 0 0-1.153 1.772c-.247.635-.416 1.363-.465 2.427C2.012 8.943 2 9.286 2 12.002c0 2.715.012 3.056.06 4.123.05 1.066.218 1.791.465 2.426a4.909 4.909 0 0 0 1.153 1.772c.5.508 1.105.902 1.772 1.153.635.248 1.363.417 2.428.465 1.064.049 1.407.06 4.123.06s3.056-.01 4.123-.06c1.067-.049 1.79-.217 2.426-.465a5.111 5.111 0 0 0 2.925-2.925c.247-.635.416-1.363.465-2.427.048-1.064.06-1.407.06-4.123s-.012-3.057-.06-4.123c-.05-1.067-.218-1.791-.465-2.426a4.902 4.902 0 0 0-1.153-1.771 4.91 4.91 0 0 0-1.772-1.155c-.635-.247-1.363-.416-2.428-.464-1.064-.048-1.406-.06-4.122-.06L12.002 2z">
@@ -943,8 +1000,8 @@
                   </svg>
                   Instagram</a>
 
-                <a class="button-link-modal flex" href="#">
-                  <svg class="icon-modal items-center margin-rigth-4px" data-encore-id="icon" role="img"
+                <a class="button-link-modal flex" href="#" target="_blank">
+                  <svg class="icon-modal items-center margin-right-4px" data-encore-id="icon" role="img"
                     aria-hidden="true" viewBox="0 0 24 24">
                     <path
                       d="M20.31 5.833a4.451 4.451 0 0 0 2-2.524 8.91 8.91 0 0 1-2.894 1.107 4.487 4.487 0 0 0-1.494-1.06 4.471 4.471 0 0 0-1.827-.38c-1.254 0-2.325.444-3.214 1.333-.89.89-1.334 1.964-1.334 3.225 0 .318.04.664.12 1.037a12.713 12.713 0 0 1-5.226-1.398A12.804 12.804 0 0 1 2.298 3.81a4.49 4.49 0 0 0-.62 2.284c0 .778.181 1.5.542 2.168a4.439 4.439 0 0 0 1.482 1.62 4.31 4.31 0 0 1-2.06-.561v.06c0 1.087.346 2.047 1.036 2.88a4.457 4.457 0 0 0 2.608 1.572 4.405 4.405 0 0 1-1.191.166 5.04 5.04 0 0 1-.856-.082 4.41 4.41 0 0 0 1.594 2.25 4.417 4.417 0 0 0 2.655.904c-1.659 1.302-3.544 1.953-5.655 1.953-.365 0-.726-.024-1.083-.072C2.869 20.317 5.194 21 7.725 21c1.358 0 2.644-.18 3.858-.541 1.215-.361 2.288-.855 3.22-1.482a13.564 13.564 0 0 0 2.525-2.19 12.232 12.232 0 0 0 1.851-2.697c.484-.964.853-1.958 1.107-2.982a12.624 12.624 0 0 0 .369-3.644 9.266 9.266 0 0 0 2.262-2.345 8.9 8.9 0 0 1-2.607.714z">
@@ -952,8 +1009,8 @@
                   </svg>
                   Twitter</a>
 
-                <a class="button-link-modal flex" href="#">
-                  <svg class="icon-modal items-center margin-rigth-4px" data-encore-id="icon" role="img"
+                <a class="button-link-modal flex" href="#" target="_blank">
+                  <svg class="icon-modal items-center margin-right-4px" data-encore-id="icon" role="img"
                     aria-label="Link externo" aria-hidden="true" viewBox="0 0 24 24">
                     <path d="M3 5a1 1 0 0 1 1-1h8v2H5v14h13v-8h2v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5z"></path>
                     <path
@@ -980,27 +1037,60 @@
                   <div class="font-14px">Postado por Bring Me The Horizon</div>
                 </div>
               </div>
-
-
             </div>
-
-
-
           </div>
-
-
         </div>
-
-
-
-
-
-
       </div>
     </div>
 
   </div>
+
+  <!-- Modal Créditos -->
+  <div class="modal-credits none">
+    <div class="contained-modal-credits">
+      <div class="header-modal-credits">
+        <h1>Créditos</h1>
+        <button id="about-credits-modal-close-button" class="button-base">
+          <svg width="18" height="18" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <title>Fechar</title>
+            <path
+              d="M31.098 29.794L16.955 15.65 31.097 1.51 29.683.093 15.54 14.237 1.4.094-.016 1.508 14.126 15.65-.016 29.795l1.414 1.414L15.54 17.065l14.144 14.143"
+              fill="white" fill-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div>
+
+
+      <!-- Conteúdo dos créditos -->
+      <div class="credits-content">
+        <div class="credits-items">
+          <h2>Throne</h2>
+
+          <div class="font-14px">
+            <p>Interpretada por</p>
+            <span class="text-gray">Bring Me The Horizon</span>
+          </div>
+
+          <div class="font-14px">
+            <p>Composta por</p>
+            <span class="text-gray">Jordan Fish, Lee Malia, Matthew Kean, Matthew Nicholls, Oliver Sykes</span>
+          </div>
+
+          <div class="font-14px">
+            <p>Produzida por</p>
+            <span class="text-gray">Oliver Sykes, Jordan Fish</span>
+          </div>
+
+          <p class="font-14px">Fonte: RCA Records Label</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="script.js"></script>
+  <script src="playlist.js"></script>
+  <script src="modal-credits.js"></script>
 </body>
 
 </html>
