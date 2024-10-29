@@ -51,6 +51,13 @@
   fill: #b3b3b3;
 }
 
+.md-icon {
+  min-width: 32px;
+  height: 32px;
+  color: #b3b3b3;
+  fill: #b3b3b3;
+}
+
 .link {
   text-decoration: none;
 }

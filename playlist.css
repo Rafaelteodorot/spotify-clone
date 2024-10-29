@@ -1,12 +1,113 @@
-* {
-    margin: 0;
-    padding: 0;
-    border: 0;
-}
-
-.content-playlist {
+div.content-playlist {
     display: flex;
+    flex-direction: column;
     width: 100%;
     border-radius: 8px;
-    background-color: red;
+    background: rgb(168, 136, 80);
+    color: #fff;
+}
+
+div.content-playlist > div.info-playlist {
+  display: flex;
+  align-items: flex-end;
+  padding: 32px 20px 20px;
+  background: linear-gradient(20deg, rgba(18, 18, 18, 0.4), rgba(18, 18, 18, 0.1)), linear-gradient(0deg, #000000, -250%, transparent);
+}
+
+div.content-playlist > div.info-playlist > div:first-child {
+  width: 174.19px;
+  height: 174.19px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-right: 20px;
+  box-shadow: 3px 9px 50px -4px rgba(18, 18, 18, 0.7);
+}
+
+div.content-playlist > div.info-playlist > div > img {
+  width: 100%;
+  height: 100%;
+}
+
+div.content-playlist > div.info-playlist > div:last-child {
+  
+}
+
+div.content-playlist > div.info-playlist > div:last-child > span {
+  font-size: 14px;
+}
+
+div.content-playlist > div.info-playlist > div:last-child > h1 {
+  font-size: 72px;
+  margin: 0;
+  line-height: 1.2;
+}
+
+div.content-playlist > div.info-playlist > div:last-child > div {
+  font-size: 14px;
+}
+
+div.content-playlist > div.info-playlist > div:last-child > div a.button-link {
+  color: #fff;
+}
+
+div.content-playlist > div.music-list {
+  flex: 1;
+  background: linear-gradient(180deg, rgba(18, 18, 18, 0.61), rgba(18, 18, 18, 0.7)), linear-gradient(0deg, #121212, transparent);
+  padding: 0 20px;
+}
+
+div.content-playlist > div.music-list > div.actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+div.content-playlist > div.music-list > div.actions > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+div.content-playlist > div.music-list > div.actions > div:first-child > button.play {
+  width: 56px;
+  height: 56px;
+  background: #1ed760;
+}
+
+div.content-playlist > div.music-list > div.actions > div:first-child > button.play > svg {
+  fill: #000;
+}
+
+div.content-playlist > div.music-list > div.actions > div:first-child > button > svg:hover {
+  fill: #fff;
+}
+
+div.content-playlist > div.music-list > div.playlist-songs {
+  display: flex;
+  flex-direction: column;
+  background-color: red;
+  padding: 0 16px;
+  grid-gap: 16px;
+}
+
+div.content-playlist > div.music-list > div.playlist-songs > div:first-child {
+  background: violet;
+}
+
+
+div.content-playlist > div.music-list > div.playlist-songs > div:last-child {
+  display: flex;
+  align-items: center;
+  background-color: green;
+}
+
+div.content-playlist > div.music-list > div.playlist-songs > div:last-child > span {
+  display: flex;
+  gap: 10px;
+}
+
+div.content-playlist > div.music-list > div.playlist-songs > div:last-child > span > img {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
 }
