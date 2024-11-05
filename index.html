@@ -51,6 +51,7 @@
   <link rel="stylesheet" href="about-artist-modal.css">
   <link rel="stylesheet" href="modal-credits.css">
   <link rel="stylesheet" href="playlist.css">
+  <link rel="stylesheet" href="modal-dropdonw.css">
 </head>
 
 <body>
@@ -128,7 +129,7 @@
               </svg>
             </button>
 
-            <button class="button-base scale flex justify-content-center items-center">
+            <button id="button-modal-dropdonw" class="button-base scale flex justify-content-center items-center">
               <span>Recentes</span>
               <svg class="sm-icon" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16"
                 class="Svg-sc-ytk21e-0 cAMMLk">
@@ -266,6 +267,44 @@
               </div>
             </li>
           </ul>
+        </div>
+      </div>
+
+      <!-- Modal Recentes -->
+      <div id="modal-dropdonw">
+        <div>
+
+          <ul>
+            <p>Classificar por</p>
+            <li>Recentes</li>
+            <li>Adicionado recentementes</li>
+            <li>Ordem alfabéticas</li>
+            <li>Criador</li>
+          </ul>
+          <ul>
+            <p>Ver como</p>
+            <li>
+              <button class="button-base">
+                <svg class="sm-icon" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16" class="Svg-sc-ytk21e-0 dYnaPI"><path d="M15.5 13.5H.5V12h15v1.5zm0-4.75H.5v-1.5h15v1.5zm0-4.75H.5V2.5h15V4z"></path></svg>
+                <span dir="auto" class="Type__TypeElement-sc-goli3j-0 dOtTDl ellipsis-one-line htqz7Vb8mLJvGKTi1vrs" data-encore-id="type">Compacto</span>
+              </button>
+            </li>
+            <li>
+              <button class="button-base">
+                <svg class="sm-icon" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16" class="Svg-sc-ytk21e-0 cAMMLk"><path d="M15 14.5H5V13h10v1.5zm0-5.75H5v-1.5h10v1.5zM15 3H5V1.5h10V3zM3 3H1V1.5h2V3zm0 11.5H1V13h2v1.5zm0-5.75H1v-1.5h2v1.5z"></path>
+                </svg>
+                <span>Lista</span>
+              </button>
+            </li>
+            <li>
+              <button class="button-base">
+                <svg class="sm-icon" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16" class="Svg-sc-ytk21e-0 dYnaPI"><path d="M1 1h6v6H1V1zm1.5 1.5v3h3v-3h-3zM1 9h6v6H1V9zm1.5 1.5v3h3v-3h-3zM9 1h6v6H9V1zm1.5 1.5v3h3v-3h-3zM9 9h6v6H9V9zm1.5 1.5v3h3v-3h-3z"></path>
+                </svg>
+                <span>Grade</span>
+              </button>
+            </li>
+          </ul>
+
         </div>
       </div>
     </div>
@@ -643,7 +682,6 @@
                 </svg>
               </button>
             </div>
-
             <div class="justify-space-between">
               <span>
                 1
@@ -651,7 +689,7 @@
               </span>
               <div class="">
 
-                <a href="#">Throne</a>
+                <a class="button-link" href="#">Throne</a>
 
                 <svg class="sm-icon" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16">
                   <path
@@ -664,7 +702,7 @@
                 </span>
               </div>
               <div>
-                <a href="#">That's The Spirit</a>
+                <a class="button-link" href="#">That's The Spirit</a>
               </div>
               <div>
                 <span>16 de mai. de 2022</span>
@@ -680,7 +718,7 @@
 
 
     <!-- Right sidebar -->
-    <div class="right-sidebar">
+    <div id="right-sidebar" class="right-sidebar">
       <header>
         <a href="#">Throne</a>
         <div>
@@ -691,7 +729,7 @@
               </path>
             </svg>
           </button>
-          <button>
+          <button id="button-sidebar-close">
             <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16" class="Svg-sc-ytk21e-0 dYnaPI">
               <path
                 d="M2.47 2.47a.75.75 0 0 1 1.06 0L8 6.94l4.47-4.47a.75.75 0 1 1 1.06 1.06L9.06 8l4.47 4.47a.75.75 0 1 1-1.06 1.06L8 9.06l-4.47 4.47a.75.75 0 0 1-1.06-1.06L6.94 8 2.47 3.53a.75.75 0 0 1 0-1.06Z">
@@ -1153,6 +1191,7 @@
   <script src="script.js"></script>
   <script src="playlist.js"></script>
   <script src="modal-credits.js"></script>
+  <script src="modal-dropdonw.js"></script>
 </body>
 
 </html>

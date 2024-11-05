@@ -85,20 +85,18 @@ div.content-playlist > div.music-list > div.actions > div:first-child > button >
 div.content-playlist > div.music-list > div.playlist-songs {
   display: flex;
   flex-direction: column;
-  background-color: red;
   padding: 0 16px;
   grid-gap: 16px;
 }
 
 div.content-playlist > div.music-list > div.playlist-songs > div:first-child {
-  background: violet;
+  
 }
 
 
 div.content-playlist > div.music-list > div.playlist-songs > div:last-child {
   display: flex;
   align-items: center;
-  background-color: green;
 }
 
 div.content-playlist > div.music-list > div.playlist-songs > div:last-child > span {

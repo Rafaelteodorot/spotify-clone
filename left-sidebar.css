@@ -4,6 +4,7 @@ main > div.left-sidebar {
   gap: 8px;
   max-height: calc(100vh - 88px);
   max-width: 320px;
+  position: relative;
 }
 
 main > div.left-sidebar ul.box {
@@ -87,6 +88,7 @@ main > div.left-sidebar > div.your-library > div.list > div.filter > button:last
   font-family: SpotifyMixUI, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, var(--fallback-fonts, sans-serif);
   font-weight: 400;
   font-size: 14px;
+  padding: 4px 12px 4px 16px;
 }
 
 main > div.left-sidebar > div.your-library > div.list > ul.playlists {

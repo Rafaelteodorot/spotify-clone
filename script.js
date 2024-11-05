@@ -4,6 +4,8 @@ window.addEventListener('load', function() {
   // Seleciona a barra lateral direita (Painel que exibe as informações da banda)
   const rightSidebar  = document.querySelector('main > div.right-sidebar');
 
+  const buttonSidebarClose = document.querySelector('#button-sidebar-close');
+
   // Seleciona todos os botões/div que tem a classe "follow"
   const followButtons = document.querySelectorAll('body button.follow, body div.button.follow');
   
@@ -35,6 +37,12 @@ window.addEventListener('load', function() {
       infoBandButton.classList.add('rotate-180deg');
     }
   });
+
+  buttonSidebarClose.addEventListener('click', function() {
+    const rightSidebar = document.querySelector('#right-sidebar');
+
+    rightSidebar.classList.add('none');
+})
 
   // Percorre todos os botões do array (lista)
   followButtons.forEach(function (button) {
