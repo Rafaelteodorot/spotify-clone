@@ -1,10 +1,10 @@
 div.content-playlist {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    border-radius: 8px;
-    background: rgb(168, 136, 80);
-    color: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 8px;
+  background: rgb(168, 136, 80);
+  color: #fff;
 }
 
 div.content-playlist > div.info-playlist {

@@ -1,0 +1,91 @@
+.filter {
+  position: relative;
+}
+
+#modal-dropdown {
+  display: none;
+  margin: 0;
+  position: absolute;
+  justify-content: center;
+  background-color: #2a2a2a;
+  top: 33%;
+  right: 03%;
+  max-width: 228.25px;
+  height: 402px;
+  border-radius: 4px;
+  padding: 4px;
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+#modal-dropdown > div {
+  display: flex;
+  flex-direction: column;
+}
+
+#modal-dropdown > div > hr {
+  width: calc(100% - 15px);
+  margin: 7px auto;
+  border-color: hsla(0, 0%, 100%, .1);
+}
+
+#modal-dropdown > div > ul:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 0;
+  padding: 10px;
+  max-width: 200.25px;  
+  height: 220px;
+  justify-content: space-between
+}
+
+#modal-dropdown > div > ul:last-child {
+  padding: 0;
+  margin: 0;
+}
+
+#modal-dropdown > div > ul > p {
+  margin: 0;
+  padding: 5px;
+  font-size: 11px;
+  font-family: CircularSpVietnameseTitle, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, var(--fallback-fonts, sans-serif);
+}
+
+#modal-dropdown > div > ul > li {
+  font-size: 14px;
+  padding: 5px;
+  display: flex;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+
+#modal-dropdown > div > ul > li.selected {
+  align-items: center;
+  color: #1ed760;
+  padding: 5px;
+}
+
+#modal-dropdown > div > ul > li.selected > svg {
+  padding: 0;
+  fill: #1ed760;
+}
+
+#modal-dropdown > div > ul:last-child > p {
+  padding: 8px 15px;
+}
+
+#modal-dropdown > div > ul > li > button {
+  height: 100%;
+  gap: 10px;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: CircularSpVietnamese, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, var(--fallback-fonts,sans-serif);
+}
+
+#modal-dropdown > div > ul > li > button > svg:last-child {
+  fill: #1ed760;
+  padding: 0px;
+}
