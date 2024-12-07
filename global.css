@@ -30,6 +30,10 @@
   color: #b3b3b3;
 }
 
+.text-green {
+  color: #1ed760;
+}
+
 .icon {
   min-width: 24px;
   height: 24px;
@@ -42,6 +46,13 @@
   height: 16px;
   color: #b3b3b3;
   fill: #b3b3b3;
+}
+
+.sm-green {
+  min-width: 16px;
+  height: 16px;
+  color: #b3b3b3;
+  fill: #1ed760
 }
 
 .xs-icon {

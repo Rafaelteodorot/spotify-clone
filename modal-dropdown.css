@@ -63,12 +63,7 @@
 #modal-dropdown > div > ul > li.selected {
   align-items: center;
   color: #1ed760;
-  padding: 5px;
-}
-
-#modal-dropdown > div > ul > li.selected > svg {
-  padding: 0;
-  fill: #1ed760;
+  padding: 0 0 0 5px;
 }
 
 #modal-dropdown > div > ul:last-child > p {
@@ -81,11 +76,11 @@
   padding: 10px;
   font-size: 14px;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.9);
   font-family: CircularSpVietnamese, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, var(--fallback-fonts,sans-serif);
+  padding-right: 7px;
 }
 
 #modal-dropdown > div > ul > li > button > svg:last-child {
   fill: #1ed760;
-  padding: 0px;
+  padding-right: 10px;
 }
