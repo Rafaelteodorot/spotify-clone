@@ -14,6 +14,7 @@ window.addEventListener('load', function() {
     const topOffset = buttonModalRightSidebar.getBoundingClientRect().top; // Distância do topo
     const leftOffset = buttonModalRightSidebar.getBoundingClientRect().left; // Distância da esquerda
     const buttonHeight = buttonModalRightSidebar.getBoundingClientRect().height; // Altura do botão
+    const buttonWidth = buttonModalRightSidebar.getBoundingClientRect().width; // Largura do botão
 
 
     modalRightSidebar.classList.remove('none');  // Remove a classe 'none' para mostrar a modal
@@ -22,7 +23,7 @@ window.addEventListener('load', function() {
     const modalWidth = modalDropdownActually.getBoundingClientRect().width;
 
     modalRightSidebar.style.top = `${topOffset + buttonHeight}px`;  // Coloca a modal abaixo do botão
-    modalRightSidebar.style.left = `${modalWidth - 315}px`; // Posiciona a modal ao lado esquedo do botão
+    modalRightSidebar.style.left = `${leftOffset - modalWidth + buttonWidth}px`; // Posiciona a modal ao lado esquedo do botão
 
 
     isModalRightSidebar = true;
@@ -39,4 +40,3 @@ window.addEventListener('load', function() {
     }
   });
 });
-

@@ -140,12 +140,12 @@ footer > .player-control > .player-control-bar > span {
   font-size: 12px;
 }
 
-footer > .player-control > .player-control-bar > div {
+footer > .player-control > .player-control-bar > div.progress-bar-container {
   width: 542px;
 }
 
 footer > .player-control > .player-control-bar > div > div {
-  width: 7%;
+  width: 0%;
 }
 
 footer > .player-actions {
@@ -179,10 +179,11 @@ footer > .player-actions > button:hover > svg {
   transform: scale(1.06);
 }
 
-footer > .player-actions > div.progress-bar {
+footer > .player-actions > div.progress-bar-container {
   width: 90px;
+  margin-right: 8px;
 }
 
-footer > .player-actions > div.progress-bar > div.progress-bar-indicator {
-  width: 35%;
+footer > .player-actions > div.progress-bar-container > div.progress-bar-indicator {
+  width: 100%;
 }

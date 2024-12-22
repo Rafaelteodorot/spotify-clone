@@ -3,6 +3,7 @@
 }
 
 #modal-dropdown {
+  z-index: 2;
   display: none;
   margin: 0;
   position: absolute;
@@ -21,6 +22,7 @@
 #modal-dropdown > div {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 #modal-dropdown > div > hr {
@@ -37,7 +39,6 @@
   padding: 10px;
   max-width: 200.25px;  
   height: 220px;
-  justify-content: space-between
 }
 
 #modal-dropdown > div > ul:last-child {
@@ -64,6 +65,7 @@
   align-items: center;
   color: #1ed760;
   padding: 0 0 0 5px;
+
 }
 
 #modal-dropdown > div > ul:last-child > p {
@@ -78,9 +80,13 @@
   font-weight: 400;
   font-family: CircularSpVietnamese, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, var(--fallback-fonts,sans-serif);
   padding-right: 7px;
+  color: #fff;
+}
+
+#modal-dropdown > div > ul > li > button > svg {
+  fill: #fff;
 }
 
 #modal-dropdown > div > ul > li > button > svg:last-child {
   fill: #1ed760;
-  padding-right: 10px;
 }
