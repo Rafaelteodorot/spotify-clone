@@ -107,7 +107,7 @@ footer > .player-control > .player-control-actions > button.pause {
   margin: 0 8px;
 }
 
-footer > .player-control > .player-control-actions > button.pause:hover {
+footer > .player-control > .player-control-actions > button:hover {
   transform: scale(1.06);
 }
 
@@ -129,11 +129,34 @@ footer > .player-control > .player-control-actions > button:hover > svg {
   fill: rgb(255, 255, 255);
 }
 
+footer > .player-control > .player-control-actions > button#player-repeater-button {
+  position: relative;
+}
+
+footer > .player-control > .player-control-actions > button#player-repeater-button.active > svg {
+  fill: #1db954;
+}
+
+
+footer > .player-control > .player-control-actions > button#player-repeater-button.playlist::before {
+  content: '';
+  position:absolute;
+  bottom: 0;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #1db954;
+} 
+
 footer > .player-control > .player-control-bar {
   display: flex;
   align-items: center;
   gap: 8px;
   max-width: 100%;
+}
+
+footer > .player-control > .player-control-bar > #player-duration {
+  cursor: pointer;
 }
 
 footer > .player-control > .player-control-bar > span {
@@ -186,4 +209,5 @@ footer > .player-actions > div.progress-bar-container {
 
 footer > .player-actions > div.progress-bar-container > div.progress-bar-indicator {
   width: 100%;
+  pointer-events: none;
 }

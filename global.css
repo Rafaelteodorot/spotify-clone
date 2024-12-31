@@ -478,6 +478,7 @@
   background: rgba(255, 255, 255, 0.3);
   height: 4px;
   border-radius: 2px;
+  cursor: pointer;
 }
 
 .progress-bar::-webkit-slider-thumb {
