@@ -8,6 +8,7 @@ window.addEventListener('load', function() {
   ];
   let currentSong = 0;
   let repeaterMode = 'off'; // off | playlist | song
+  let randomizeMode = 'off'; // oof | on
 
   // Selecionando o elemento <audio>
   const audioPlayer = document.querySelector('audio');
@@ -16,8 +17,9 @@ window.addEventListener('load', function() {
   let durationMode = 'total'; // Mostra a duração total ou rest do tempo da música
 
   // Seleção dos botões e elementos de controle
-  const playAndPauseButton = document.querySelector('#player-play-and-pause-button');  // Botão de play/pause
+  const randomizeButton = document.querySelector('#player-randomize-button'); // Botão de ordem aleatória
   const backwardButton = document.querySelector('#player-backward-button'); // Botão de voltar para a música anterior
+  const playAndPauseButton = document.querySelector('#player-play-and-pause-button');  // Botão de play/pause
   const farwardButton = document.querySelector('#player-farward-button'); // Botão de próxima música
   const repeaterButton = document.querySelector('#player-repeater-button'); // Botão de repetir a música
   const mutedButton = document.querySelector('#player-muted-button');  // Botão de mudo
@@ -61,6 +63,10 @@ const repeaterSongIcon = `
   </svg>
 `;
 
+  function genereteRandomNumber(min, max) {
+    return Math.floor(Math.random() * ((max + 1) - min) + min);
+  };
+
   function handleDuarationLabel() {
     const audioDurationInMinutes = Math.floor(audioPlayer.duration / 60); // Calcula minutos
     const audioDurationInSeconds = Math.floor(audioPlayer.duration % 60); // Calcula segundos
@@ -70,12 +76,22 @@ const repeaterSongIcon = `
     timeSeek.max = Math.floor(audioPlayer.duration).toString();  // Define o valor máximo da barra de progresso
   };
 
+  function handleNextSongRandomized() {
+    const nextSongIndex = genereteRandomNumber(0, songs.length - 1);
+
+    if (nextSongIndex === currentSong) {
+      return handleNextSongRandomized();
+    };
+
+    return nextSongIndex;
+  }
+
   function handleNextSong() {
     let nextSongIndex = currentSong + 1;
 
     if (randomizeMode === 'on') {
-      nextSongIndex = handleNextSongRandomized();
-    }
+      nextSongIndex = genereteRandomNumber(0, songs.length - 1);
+    };
 
     currentSong = nextSongIndex;
     let nextSong = songs[currentSong];
@@ -129,6 +145,18 @@ const repeaterSongIcon = `
     }
   });
 
+
+  randomizeButton.addEventListener('click', function() {
+    if (randomizeMode === 'off') {
+      randomizeMode = 'on';
+      randomizeButton.classList.add('active', 'ball');
+    } else {
+      randomizeMode = 'off';
+      randomizeButton.classList.remove('active', 'ball');
+
+    };
+  });
+
   // Evento de voltar para a música anterior
   backwardButton.addEventListener('click', function() {
     currentSong = currentSong - 1;
@@ -156,16 +184,16 @@ const repeaterSongIcon = `
   repeaterButton.addEventListener('click', function() {
     if (repeaterMode === 'off') {
       repeaterMode = 'playlist';
-      repeaterButton.classList.add('active', 'playlist');
+      repeaterButton.classList.add('active', 'ball');
       repeaterButton.innerHTML = repeaterIcon;
     } else if (repeaterMode === 'playlist') {
       repeaterMode = 'song';
-      repeaterButton.classList.add('active', 'playlist');
+      repeaterButton.classList.add('active', 'ball');
       repeaterButton.innerHTML = repeaterSongIcon;
     } else {
       repeaterMode = 'off';
       repeaterButton.classList.remove('active');
-      repeaterButton.classList.remove('playlist');
+      repeaterButton.classList.remove('ball');
       repeaterButton.innerHTML = repeaterIcon;
     };
   });
@@ -182,7 +210,15 @@ const repeaterSongIcon = `
   });
 
   // Evento de quando a música acaba
-  audioPlayer.addEventListener('ended', handleNextSong);
+  audioPlayer.addEventListener('ended', function() {
+    if (repeaterMode === 'song') {
+      audioPlayer.currentTime = 0;
+      audioPlayer.play();
+      return;
+    };
+
+    handleNextSong();
+  });
 
   // Evento para detectar mudanças no volume
   audioPlayer.addEventListener('volumechange', function () {

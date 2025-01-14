@@ -1,0 +1,54 @@
+main > div.left-sidebar > div.your-library {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #121212;
+  flex: 1;
+  border-radius: 8px;
+}
+
+main > div.left-sidebar > div.your-library > header {
+  padding: 8px 16px;
+}
+
+main > div.left-sidebar > div.your-library > header > button {
+  gap: 12px;
+  padding: 4px 8px;
+}
+
+main > div.left-sidebar > div.your-library > header > div {
+  gap: 8px;
+}
+
+main > div.left-sidebar > div.your-library > div.filter {
+  padding: 8px 16px;
+  gap: 8px;
+}
+
+main > div.left-sidebar > div.your-library > div.list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0 8px 8px;
+}
+
+main > div.left-sidebar > div.your-library > div.list > div.filter {
+  padding: 2px 4px 0px 8px;
+}
+
+main > div.left-sidebar > div.your-library > div.list > div.filter > button:last-child {
+  gap: 5px;
+  font-family: SpotifyMixUI, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, var(--fallback-fonts, sans-serif);
+  font-weight: 400;
+  font-size: 14px;
+  padding: 4px 12px 4px 16px;
+}
+
+main > div.left-sidebar > div.your-library > div.list > ul.playlists {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+main > div.left-sidebar > div.your-library > div.list > ul.playlists > li.card-playlist > button > svg {
+  transform: rotate(-90deg);
+}
