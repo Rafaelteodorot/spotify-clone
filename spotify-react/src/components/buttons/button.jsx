@@ -1,12 +1,16 @@
 import PropTypes from 'prop-types';
 import './button.css';
 
-export function Button(prosp) {
+export function Button(props) {
   return (
-    <button className='button'>{prosp.children}</button>
+    <button className={`button${props.bordered ? ' border' : ''}${props.scale ? ' scale' : ''}${props.highlightSmoothingText ? ' hightlight-smoothing-text' : ''}`}>{props.adornmentLeft}<span>{props.children}</span></button>   
   );
 }
 
 Button.propTypes = {
-  children: PropTypes.elementType
+  children: PropTypes.elementType,
+  adornmentLeft: PropTypes.elementType,
+  bordered: PropTypes.boolean,
+  scale: PropTypes.boolean,
+  highlightSmoothingText: PropTypes.boolean,
 };

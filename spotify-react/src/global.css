@@ -1,0 +1,319 @@
+.font-title {
+  font-family: CircularSpVietnameseTitle, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, var(--fallback-fonts, sans-serif);
+}
+
+.font-text {
+  font-family: SpotifyMixUI, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, var(--fallback-fonts, sans-serif);
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-14px {
+  font-size: 14px;
+}
+
+.gap-8px {
+  gap: 8px;
+}
+
+.margin-right-4px {
+  margin-right: 4px;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.text-gray {
+  color: #b3b3b3;
+}
+
+.text-green {
+  color: #1ed760;
+}
+
+.icon {
+  min-width: 24px;
+  height: 24px;
+  color: #b3b3b3;
+  fill: #b3b3b3;
+}
+
+.sm-icon {
+  min-width: 16px;
+  height: 16px;
+  color: #b3b3b3;
+  fill: #b3b3b3;
+}
+
+.sm-green {
+  min-width: 16px;
+  height: 16px;
+  color: #b3b3b3;
+  fill: #1ed760
+}
+
+.xs-icon {
+  min-width: 12px;
+  height: 12px;
+  color: #b3b3b3;
+  fill: #b3b3b3;
+}
+
+.md-icon {
+  min-width: 32px;
+  height: 32px;
+  color: #b3b3b3;
+  fill: #b3b3b3;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.none {
+  display: none !important;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #1f1f1f;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 16px;
+}
+
+.card-calendar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.card-calendar:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.card-calendar > .date {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 56px;
+  height: 56px;
+  padding: 8px;
+  align-items: center;
+  background: #1f1f1f;
+  font-family: CircularSpVietnameseTitle, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, var(--fallback-fonts, sans-serif);
+  font-weight: 700;
+  border-radius: 4px;
+}
+
+.card-calendar > .date > span:first-child {
+  font-size: 11px;
+}
+
+.card-calendar > .date > span:last-child {
+  font-size: 24px;
+  line-height: 110%;
+}
+
+.card-calendar > .info {
+  color: #b3b3b3;
+  overflow: hidden;
+}
+
+.card-calendar > .info > h3 {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.card-calendar > .info > p {
+  margin: 0;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.card-calendar > .info > div {
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-track {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px;
+  color: #fff;
+  border-radius: 6px;
+}
+
+.card-track:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.card-track > svg {
+  min-width: 16px;
+  height: 16px;
+}
+
+.card-track > img {
+  width: 46px;
+  height: 46px;
+  border-radius: 4px;
+}
+
+.card-track > div {
+  overflow: hidden;
+}
+
+.card-track > div > *:last-child {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-playlist {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.card-playlist:hover {
+  background: #1f1f1f;
+}
+
+.card-playlist > img {
+  width: 48px;
+  height: 48px;
+  border-radius: 4px;
+}
+
+.card-playlist > div.folder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 4px;
+  background: #282828;
+}
+
+.card-playlist > .info {
+  overflow: hidden;
+  flex: 1;
+}
+
+.card-playlist > .info > h3 {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-playlist > .info > span > svg {
+  margin-right: 5px;
+  fill: #1ed760;
+}
+
+.card-playlist > .info > span > span {
+  color: #b3b3b3;
+  font-size: 14px;
+}
+
+.progress-bar-container {
+  position: relative;
+  display: flex;
+}
+
+.progress-bar-container:hover > .progress-bar::-webkit-slider-thumb {
+  visibility: visible;
+}
+
+.progress-bar-container:hover > .progress-bar-indicator {
+  background: #1ed760;
+}
+
+.progress-bar {
+  all: unset;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  height: 4px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.progress-bar::-webkit-slider-thumb {
+  position: relative;
+  -webkit-appearance: none;
+  appearance: none;
+  visibility: hidden;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.progress-bar-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+  height: 4px;
+  border-radius: 2px;
+}

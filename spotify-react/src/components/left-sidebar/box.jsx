@@ -1,3 +1,5 @@
+import './box.css';
+
 export function Box() {
   return (
     <div className="left-sidebar">

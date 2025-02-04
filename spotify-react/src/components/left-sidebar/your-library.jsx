@@ -1,52 +1,50 @@
+import './your-library.css';
+import { Button } from '../buttons/button';
+import { Icon } from '../icons/icon';
+import { YourLibraryIcon } from '../icons/your-library-icon';
+import { IconButton } from '../buttons/icon-button';
+import { IconButtonSvgMore } from '../buttons/icon-button-svg-more';
+import { IconButtonSvgArrow } from '../buttons/icon-button-svg-arrow';
+import { ButtonContained } from '../buttons/button-contained';
+import { IconButtonSvgSearch } from '../buttons/icon-button-svg-search';
+
 export function YourLibrary() {
   return (
     <div className="your-library">
       <header className="flex justify-space-between items-center">
-        <button className="flex items-center button-base">
-          <svg className="icon" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24">
-            <path
-            d="M3 22a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1zM15.5 2.134A1 1 0 0 0 14 3v18a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V6.464a1 1 0 0 0-.5-.866l-6-3.464zM9 2a1 1 0 0 0-1 1v18a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1z">
-            </path>
-          </svg>
-          <span>Sua Biblioteca</span>
-        </button>
+        <Button highlightSmoothingText adornmentLeft={
+          <Icon highlightSmoothing>
+            <YourLibraryIcon />
+          </Icon>
+        }>Sua Biblioteca</Button>
 
         <div className="flex">
           {/* Create playlist */}
-          <button className="icon-button highlight">
-            <svg className="sm-icon" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16">
-              <path
-                d="M15.25 8a.75.75 0 0 1-.75.75H8.75v5.75a.75.75 0 0 1-1.5 0V8.75H1.5a.75.75 0 0 1 0-1.5h5.75V1.5a.75.75 0 0 1 1.5 0v5.75h5.75a.75.75 0 0 1 .75.75z">
-              </path>
-            </svg>
-          </button>
+          <IconButton highlight>
+            <IconButtonSvgMore />
+          </IconButton>
 
           {/* View more */}
-          <button className="icon-button highlight">
-            <svg className="sm-icon" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16">
-              <path
-                d="M7.19 1A.749.749 0 0 1 8.47.47L16 7.99l-7.53 7.521a.75.75 0 0 1-1.234-.815.75.75 0 0 1 .174-.243l5.72-5.714H.75a.75.75 0 1 1 0-1.498h12.38L7.41 1.529a.749.749 0 0 1-.22-.53z">
-              </path>
-            </svg>
-          </button>
+          <IconButton highlight>
+            <IconButtonSvgArrow />
+          </IconButton>
         </div>
       </header>
 
       <div className="filter flex items-center">
-        <button className="button contained">Playlists</button>
-        <button className="button contained">Podcasts e programas</button>
+        <ButtonContained button contained>Playlists</ButtonContained>
+        <ButtonContained button contained>Podcasts e programas</ ButtonContained>
       </div>
 
       <div className="list flex flex-col">
         <div className="filter flex justify-space-between">
-          <button className="icon-button">
-            <svg className="sm-icon" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16">
-              <path
-                d="M7 1.75a5.25 5.25 0 1 0 0 10.5 5.25 5.25 0 0 0 0-10.5zM.25 7a6.75 6.75 0 1 1 12.096 4.12l3.184 3.185a.75.75 0 1 1-1.06 1.06L11.304 12.2A6.75 6.75 0 0 1 .25 7z">
-              </path>
-            </svg>
-          </button>
+          <ButtonContained button>
+            <IconButtonSvgSearch />
+          </ButtonContained>
 
+          <ButtonContained button>
+            Recentes
+          </ButtonContained>
           <button id="button-modal-dropdown" className="button-base scale flex justify-content-center items-center">
             <span>Recentes</span>
               <svg className="sm-icon" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16">
@@ -57,7 +55,7 @@ export function YourLibrary() {
           </button>
         </div>
 
-        <ul className="playlist flex flex-col">
+        <ul className="playlists flex flex-col">
           <li className="card-playlist flex">
             <img src="https://misc.scdn.co/liked-songs/liked-songs-64.png"/>
             <div className="info">
@@ -169,7 +167,7 @@ export function YourLibrary() {
 
             <li className="card-playlist flex">
               <img
-                src="https://mosaic.scdn.co/60/        ab67616d00001e021faa5acc9f479da7a0258c8aab67616d00001e02654ddf5725b164761d445181ab67616d00001e02c6b6244ab810f6b0b8528bfaab67616d00001e02fda751b535b40b6f1066e480"/>
+                src="https://mosaic.scdn.co/60/ab67616d00001e021faa5acc9f479da7a0258c8aab67616d00001e02654ddf5725b164761d445181ab67616d00001e02c6b6244ab810f6b0b8528bfaab67616d00001e02fda751b535b40b6f1066e480"/>
               <div className="info">
                 <h3 className="text-white">Earthquake</h3>
                 <span>

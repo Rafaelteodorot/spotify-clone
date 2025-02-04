@@ -105,30 +105,33 @@
   background: transparent;
   border-radius: 9999px;
   cursor: pointer;
-  border: 1px solid #7c7c7c;
   font-family: SpotifyMixUI, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, var(--fallback-fonts, sans-serif);
+  font-size: 16px;
   font-weight: 700;
   color: #fff;
   height: 32px;
   white-space: nowrap;
 }
 
-.button:hover {
-  transform: scale(1.04);
+.button.border {
+  border: 1px solid #7c7c7c;
+}
+
+.button.border:hover {
   border-color: #fff;
 }
 
-.button.contained {
-  background: rgba(255, 255, 255, 0.1);
-  border: none;
-  font-weight: 400;
-  font-size: 14px;
-  padding: 4px 12px;
+.button.scale:hover {
+  transform: scale(1.04);
 }
 
-.button.contained:hover {
-  background: hsla(0, 0%, 100%, .14);
-  transform: none;
+.button.hightlight-smoothing-text {
+  color: #b3b3b3;
+  transition: color 200ms linear;
+}
+
+.button.hightlight-smoothing-text:hover {
+  color: #fff;
 }
 
 .button.scale:hover {

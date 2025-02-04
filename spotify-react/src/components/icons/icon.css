@@ -1,0 +1,22 @@
+.icon {
+  min-width: 24px;
+  height: 24px;
+  color: #fff;
+  fill: #fff;
+}
+
+button:has(> .icon.highlight-smoothing):hover > .icon.highlight-smoothing {
+  fill: #fff;
+  color: #fff;
+}
+
+.icon.highlight-smoothing {
+  color: #b3b3b3;
+  fill: #b3b3b3;
+  transition: fill 200ms linear;
+}
+
+.icon.highlight-smoothing:hover {
+  fill: #fff;
+  color: #fff;
+}

@@ -1,3 +1,4 @@
+import './left-sidebar.css';
 import { Box } from './box';
 import { YourLibrary } from './your-library';
 

@@ -1,0 +1,33 @@
+/* Estilos padrão para o botão */
+.icon-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  transition: transparent 200ms linear;
+}
+
+/* Estilo do ícone dentro do botão */
+.icon-button > svg {
+  transition: fill 200ms linear;
+}
+
+/* Aplicando a rotação de 180 graus */
+.icon-button.rotate-180deg {
+  transform: rotate(180deg);
+}
+
+/* Muda a cor do ícone no hover */
+.icon-button.highlight:hover {
+  background: #1f1f1f; 
+}
+
+/* Estilo do ícone dentro do botão */
+.icon-button.highlight:hover > svg {
+  fill: #fff; /* Transição suave para a cor do ícone */
+}

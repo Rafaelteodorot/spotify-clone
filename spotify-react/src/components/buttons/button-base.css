@@ -1,0 +1,27 @@
+.button-base {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: none;
+  padding: 0;
+  height: 40px;
+  color: #b3b3b3;
+  font-family: CircularSpVietnameseTitle, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, var(--fallback-fonts, sans-serif);
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 200ms linear;
+}
+
+.button-base > svg {
+  transition: fill 200ms linear;
+}
+
+.button-base:hover {
+  color: #fff;
+}
+
+.button-base:hover > svg {
+  fill: #fff;
+}

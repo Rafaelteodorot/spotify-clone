@@ -1,0 +1,16 @@
+import PropTypes from 'prop-types';
+import './icon.css';
+import React from 'react';
+
+export function Icon(props) {
+  const children = React.Children.map(props.children, (child) => React.cloneElement(child, {
+    className: `icon${props.highlightSmoothing ? ' highlight-smoothing' : ''}`,
+  }));
+
+  return children;
+}
+
+Icon.propTypes = {
+  children: PropTypes.elementType,
+  highlightSmoothing: PropTypes.boolean,
+};
