@@ -22,7 +22,6 @@ export function IconButton(props) {
 IconButton.propsTypes = {
   children: PropTypes.elementType, // Espera que 'Children' seja um elemento React, como um ícone SVG ou outra coisa;
   adornmentRight: PropTypes.elementType, // 'adornmentRight' é o conteúdo que aparece à direita (pode ser um ícone, texto, etc);
-  bordered: PropTypes.boolean, // 'Bordered' é uma propriedade booleana;
   scale: PropTypes.boolean, // 'Scale' é uma propriedade booleana;
   highlight: PropTypes.boolean, // 'Highlight' adiciona efeito de hover;
 };

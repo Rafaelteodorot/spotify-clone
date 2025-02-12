@@ -5,6 +5,21 @@
   fill: #fff;
 }
 
+.icon.sm {
+  min-width: 16px;
+  height: 16px;
+}
+
+.icon.gray {
+  color: #b3b3b3;
+  fill: #b3b3b3;
+}
+
+.icon.green {
+  color: #1ed760;
+  fill: #1ed760;
+}
+
 button:has(> .icon.highlight-smoothing):hover > .icon.highlight-smoothing {
   fill: #fff;
   color: #fff;

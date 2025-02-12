@@ -5,8 +5,8 @@ import { YourLibraryIcon } from '../icons/your-library-icon';
 import { IconButton } from '../buttons/icon-button';
 import { IconButtonSvgMore } from '../buttons/icon-button-svg-more';
 import { IconButtonSvgArrow } from '../buttons/icon-button-svg-arrow';
-import { ButtonContained } from '../buttons/button-contained';
 import { IconButtonSvgSearch } from '../buttons/icon-button-svg-search';
+import { RecentsIcon } from '../icons/recents-icon';
 
 export function YourLibrary() {
   return (
@@ -32,28 +32,23 @@ export function YourLibrary() {
       </header>
 
       <div className="filter flex items-center">
-        <ButtonContained button contained>Playlists</ButtonContained>
-        <ButtonContained button contained>Podcasts e programas</ ButtonContained>
+        <Button variant="contained">Playlists</Button>
+        <Button variant="contained">Podcasts e programas</ Button>
       </div>
 
       <div className="list flex flex-col">
         <div className="filter flex justify-space-between">
-          <ButtonContained button>
+          <IconButton highlight variant="text">
             <IconButtonSvgSearch />
-          </ButtonContained>
+          </IconButton>
 
-          <ButtonContained button>
-            Recentes
-          </ButtonContained>
-          <button id="button-modal-dropdown" className="button-base scale flex justify-content-center items-center">
-            <span>Recentes</span>
-              <svg className="sm-icon" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16">
-                <path
-                  d="M15 14.5H5V13h10v1.5zm0-5.75H5v-1.5h10v1.5zM15 3H5V1.5h10V3zM3 3H1V1.5h2V3zm0 11.5H1V13h2v1.5zm0-5.75H1v-1.5h2v1.5z">
-                </path>
-              </svg>
-          </button>
+          <Button highlightSmoothingText scale adornmentRight={
+            <Icon highlightSmoothing size="sm">
+              <RecentsIcon />
+            </Icon>
+          }>Recentes</Button>
         </div>
+      
 
         <ul className="playlists flex flex-col">
           <li className="card-playlist flex">
