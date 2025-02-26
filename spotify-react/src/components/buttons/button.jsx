@@ -12,7 +12,8 @@ export function Button(props) {
       ${props.bordered ? ' border' : ''}
       ${props.scale ? ' scale' : ''}
       ${props.highlightSmoothingText ? ' hightlight-smoothing-text' : ''}
-      ${props.variant}
+      ${variant}
+      ${props.link ? ' link ' : ''}
       `}
       >
         {props.adornmentLeft}
@@ -30,4 +31,5 @@ Button.propTypes = {
   scale: PropTypes.boolean,
   highlightSmoothingText: PropTypes.boolean,
   variant: PropTypes.string, // contained, outlined, text
+  link: PropTypes.boolean,
 };

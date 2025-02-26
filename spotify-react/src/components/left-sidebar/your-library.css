@@ -48,7 +48,3 @@ main > div.left-sidebar > div.your-library > div.list > ul.playlists {
   margin: 0;
   list-style: none;
 }
-
-main > div.left-sidebar > div.your-library > div.list > ul.playlists > li.card-playlist > button > svg {
-  transform: rotate(-90deg);
-}

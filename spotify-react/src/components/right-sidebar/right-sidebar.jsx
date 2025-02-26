@@ -5,6 +5,37 @@ import { Icon } from '../icons/icon';
 import { RightSidebarCloseIcon } from './right-sidebar-close-icon';
 import { RightSidebarCheckIcon } from './right-sidebar-check-icon';
  
+const RightSidebarCard = [
+  {
+    title: 'Em turnê',
+    ButtonText: 'Mostrar tudo',
+  },
+  {
+    date: 'Ago.',
+    date: '17',
+  },
+  {
+    location: '千葉市美浜区',
+    description: 'GLAY com Belle and Sebastian, Gen Hoshino, SUPER BEAVER e OneRepublic mais…',
+    date: 'sáb.,',
+    time: '11:00 •',
+    location: 'ZOZOマリンスタジアム/幕張メッセ',
+  },
+  {
+    date: 'Ago.',
+    date: '17',
+  },
+  {
+    location: '吹田市',
+    description: 'SUMMER SONIC 2024 [OSAKA]',
+    date: 'sáb.,',
+    time: '11:00 •',
+    location: ' 万博記念公園',
+  },
+  {
+    title: 'A seguir',
+    ButtonText: 'Abrir fila',
+  }]
 
 export function RightSidebar() {
   return (
@@ -30,7 +61,7 @@ export function RightSidebar() {
     <div className="track-info">
       <div>
         <a href="#">
-          {/* imagem 01 */}
+        <img src="https://i.scdn.co/image/ab67616d0000b273413697269620e16f4466f543" />
         </a>
       </div>
       <div>
@@ -49,7 +80,7 @@ export function RightSidebar() {
 
 
     <button className="about-artist card" id="about-artist-button">
-      {/* imagem 02 */}
+      <img src="https://i.scdn.co/image/ab6761670000ecd4aa00546de6a62ce643102ffc" />
       <div>
         <a href="#" className="font-title link font-bold">Bring Me The Horizon</a>
         <div>
@@ -91,7 +122,7 @@ export function RightSidebar() {
     <div className="card">
       <div className="flex justify-space-between items-center">
         <span className="font-title text-white">Em turnê</span>
-        <button className="button-link">Mostrar tudo</button>
+        <Button highlightSmoothingText scale link fontSize="font-14px">Mostrar tudo</Button>
       </div>
 
       <a className="card-calendar" href="#">
@@ -124,7 +155,7 @@ export function RightSidebar() {
     <div className="card">
       <div className="flex justify-space-between items-center">
         <span className="font-title text-white">A seguir</span>
-        <button className="button-link">Abrir fila</button>
+        <Button highlightSmoothingText scale link>Abrir fila</Button>
       </div>
 
       <div className="card-track">
@@ -132,7 +163,7 @@ export function RightSidebar() {
           <path d="M10 2v9.5a2.75 2.75 0 1 1-2.75-2.75H8.5V2H10zm-1.5 8.25H7.25A1.25 1.25 0 1 0 8.5 11.5v-1.25z">
           </path>
         </svg>
-        {/* imagem 3 */}
+        <img src="https://i.scdn.co/image/ab67616d000048517c2b1dc1639152beaeadf00d" />
         <div className="flex flex-col">
           <a className="link text-white" href="#">Teardrops</a>
           <a className="link text-gray" href="#">Bring Me The Horizon</a>
@@ -144,9 +175,3 @@ export function RightSidebar() {
 </div>
   );
 }
-
-{/* imagem 01 - <img src="https://i.scdn.co/image/ab67616d0000b273413697269620e16f4466f543"> */}
-
-{/* imagem 02 - <img src="https://i.scdn.co/image/ab6761670000ecd4aa00546de6a62ce643102ffc" /> */}
-
-{/* imagem 03 - <img src="https://i.scdn.co/image/ab67616d000048517c2b1dc1639152beaeadf00d"> */}

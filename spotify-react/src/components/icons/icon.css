@@ -5,6 +5,11 @@
   fill: #fff;
 }
 
+.icon.xs {
+  max-width: 12px;
+  height: 12px;
+}
+
 .icon.sm {
   min-width: 16px;
   height: 16px;

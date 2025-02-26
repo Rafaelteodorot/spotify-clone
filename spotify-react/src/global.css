@@ -219,61 +219,6 @@
   text-overflow: ellipsis;
 }
 
-.card-playlist {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 8px;
-  color: #fff;
-  border-radius: 6px;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.card-playlist:hover {
-  background: #1f1f1f;
-}
-
-.card-playlist > img {
-  width: 48px;
-  height: 48px;
-  border-radius: 4px;
-}
-
-.card-playlist > div.folder {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 4px;
-  background: #282828;
-}
-
-.card-playlist > .info {
-  overflow: hidden;
-  flex: 1;
-}
-
-.card-playlist > .info > h3 {
-  font-size: 16px;
-  font-weight: 400;
-  margin: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.card-playlist > .info > span > svg {
-  margin-right: 5px;
-  fill: #1ed760;
-}
-
-.card-playlist > .info > span > span {
-  color: #b3b3b3;
-  font-size: 14px;
-}
-
 .progress-bar-container {
   position: relative;
   display: flex;
