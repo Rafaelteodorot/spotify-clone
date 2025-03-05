@@ -7,14 +7,14 @@ import { IconButtonSvgMore } from '../buttons/icon-button-svg-more';
 import { IconButtonSvgArrow } from '../buttons/icon-button-svg-arrow';
 import { IconButtonSvgSearch } from '../buttons/icon-button-svg-search';
 import { RecentsIcon } from '../icons/recents-icon';
-import { PlayListItem } from './playlist-item';
+import { PlaylistItem } from './playlist-item';
 
 const playlists = [
   {
     imageUrl: 'https://misc.scdn.co/liked-songs/liked-songs-64.png',
     title: 'Músicas Curtidas',
     fixed: true,
-    description: 'PlayList • 14 músicas',
+    description: 'Playlist • 14 músicas',
     folder: false,
   },
   {
@@ -79,7 +79,7 @@ const playlists = [
     fixed: false,
     description: 'Playlist • Felipe martins pupo',
     folder: false,
-  }]
+  }];
 
 export function YourLibrary() {
   return (
@@ -126,17 +126,17 @@ export function YourLibrary() {
         <ul className="playlists flex flex-col">
           {playlists.map((playlist, index) => {
             return (
-              <PlayListItem.Root key={index}>
-                {playlist.folder ? <PlayListItem.IconFolder /> : <PlayListItem.Image src={playlist.imageUrl} />}
-                <PlayListItem.Content>
-                  <PlayListItem.Title>{playlist.title}</PlayListItem.Title>
-                  <PlayListItem.ContainerDescription>
-                    {playlist.fixed && <PlayListItem.Icon />}
-                    <PlayListItem.Description>{playlist.description}</PlayListItem.Description>
-                  </PlayListItem.ContainerDescription>
-                </PlayListItem.Content>
-                {playlist.folder && <PlayListItem.Button />}
-              </PlayListItem.Root>
+              <PlaylistItem.Root key={index}>
+                {playlist.folder ? <PlaylistItem.IconFolder /> : <PlaylistItem.Image src={playlist.imageUrl} />}
+                <PlaylistItem.Content>
+                  <PlaylistItem.Title>{playlist.title}</PlaylistItem.Title>
+                  <PlaylistItem.ContainerDescription>
+                    {playlist.fixed && <PlaylistItem.Icon />}
+                    <PlaylistItem.Description>{playlist.description}</PlaylistItem.Description>
+                  </PlaylistItem.ContainerDescription>
+                </PlaylistItem.Content>
+                {playlist.folder && <PlaylistItem.Button />}
+              </PlaylistItem.Root>
             );
           })}
         </ul>
