@@ -6,6 +6,8 @@ import { RightSidebarCloseIcon } from './right-sidebar-close-icon';
 import { RightSidebarCheckIcon } from './right-sidebar-check-icon';
 import { EventItem } from './event-item';
 import { QueueItem } from './queue-item';
+import { BandCard } from './band-card';
+import { BandInfo } from './band-info';
 
 const events = [
   {
@@ -37,7 +39,6 @@ const queue = [
 
 export function RightSidebar() {
   return (
-
     <div id="right-sidebar" className="right-sidebar">
       <header>
         <a href="#">Throne</a>
@@ -76,21 +77,47 @@ export function RightSidebar() {
           </div>
         </div>
 
+        <BandCard 
+          imageSrc="https://i.scdn.co/image/ab6761670000ecd4aa00546de6a62ce643102ffc" 
+          bandName="Bring Me The Horizon" 
+          website="https://www.bmthofficial.com"
+          numberOfListeners="14.169.460"
+        />
 
-        <button className="about-artist card" id="about-artist-button">
-          <img src="https://i.scdn.co/image/ab6761670000ecd4aa00546de6a62ce643102ffc" />
-          <div>
-            <a href="#" className="font-title link font-bold">Bring Me The Horizon</a>
-            <div>
-              <span className="text-gray font-text">14.169.460 ouvintes mensais</span>
-              <div className="button follow">Seguir</div>
-            </div>
-            <div>
-              <span className="text-gray font-text font-bold">BRING ME THE HORIZON</span>
-              <span className="text-gray font-text font-bold">https://www.bmthofficial.com</span>
-            </div>
-          </div>
-        </button>
+        {/* <BandCardComposition.Root>
+          <BandCardComposition.Image src="https://i.scdn.co/image/ab6761670000ecd4aa00546de6a62ce643102ffc" />
+          <BandCardComposition.Container>
+            <BandCardComposition.Name>Bring Me The Horizon</BandCardComposition.Name>
+            <BandCardComposition.ActionsContainer>
+              <BandCardComposition.NumberOfListeners>
+                14.169.460 ouvintes mensais
+              </BandCardComposition.NumberOfListeners>
+              <BandCardComposition.FollowButton>Seguir</BandCardComposition.FollowButton>
+            </BandCardComposition.ActionsContainer>
+            <BandCardComposition.MoreInfoContainer>
+              <BandCardComposition.MoreInfoTitle>Bring Me The Horizon</BandCardComposition.MoreInfoTitle>
+              <BandCardComposition.MoreInfoDescription>https://www.bmthofficial.com</BandCardComposition.MoreInfoDescription>
+            </BandCardComposition.MoreInfoContainer>
+          </BandCardComposition.Container>
+        </BandCardComposition.Root> */}
+
+        <BandInfo
+          members={[
+            {
+              name: "Oliver Sykes",
+              roles: ["Compositor", "Letrista", "Produtor"],
+            },
+            {
+              name: "Lee Malia",
+              roles: ["Compositor", "Letrista"],
+            },
+            {
+              name: "Jessica Tamanaha",
+              roles: ["Engenheira", "Cientista de dados"],
+            }
+          ]}
+          bandName="Bring Me The Horizon"
+        />
 
         <div className="card">
           <div className="flex justify-space-between items-center">
@@ -162,7 +189,6 @@ export function RightSidebar() {
           );
         })}
       </div>
-
     </div>
   );
 }

@@ -34,6 +34,10 @@
   color: #1ed760;
 }
 
+.text-uppercase {
+  text-transform: uppercase;
+}
+
 .icon {
   min-width: 24px;
   height: 24px;
