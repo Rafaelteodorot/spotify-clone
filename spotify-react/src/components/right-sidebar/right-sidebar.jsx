@@ -121,31 +121,6 @@ export function RightSidebar() {
 
         <div className="card">
           <div className="flex justify-space-between items-center">
-            <span className="font-title text-white">Créditos</span>
-            <button id="about-credits-button" className="button-link">Mostrar tudo</button>
-          </div>
-
-          <div className="flex items-center">
-            <div className="flex flex-col">
-              <a className="link text-white" href="#">Bring Me The Horizon</a>
-              <span className="text-gray font-text font-14px">Artista Principal</span>
-            </div>
-            <button className="button follow">Seguir</button>
-          </div>
-
-          <div className="flex flex-col">
-            <span className="text-white">Oliver Sykes</span>
-            <span className="text-gray font-text font-14px">Compositor, Letrista, Produtor</span>
-          </div>
-
-          <div className="flex flex-col">
-            <span className="text-white">Lee Malia</span>
-            <span className="text-gray font-text font-14px">Compositor, Letrista</span>
-          </div>
-        </div>
-
-        <div className="card">
-          <div className="flex justify-space-between items-center">
             <span className="font-title text-white">Em turnê</span>
             <Button highlightSmoothingText scale link fontSize="font-14px">Mostrar tudo</Button>
           </div>
