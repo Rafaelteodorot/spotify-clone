@@ -13,5 +13,5 @@ export function RightSidebarCloseIcon(props) {
 }
 
 RightSidebarCloseIcon.propTypes = {
-  className: PropTypes.string,
+  className: PropTypes.string.isRequired,
 };

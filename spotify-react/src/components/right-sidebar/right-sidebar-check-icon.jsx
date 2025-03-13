@@ -13,5 +13,5 @@ export function RightSidebarCheckIcon(props) {
 }
 
 RightSidebarCheckIcon.PropTypes = {
-  className: PropTypes.string,
+  className: PropTypes.string.isRequired,
 };

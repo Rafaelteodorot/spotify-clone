@@ -22,8 +22,8 @@ export function BandCard(props) {
 }
 
 BandCard.propTypes = {
-  imageSrc: PropTypes.string,
-  bandName: PropTypes.string,
-  numberOfListeners: PropTypes.string,
-  website: PropTypes.string,
+  imageSrc: PropTypes.string.isRequired,
+  bandName: PropTypes.string.isRequired,
+  numberOfListeners: PropTypes.string.isRequired,
+  website: PropTypes.string.isRequired,
 };
