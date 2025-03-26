@@ -30,6 +30,7 @@ export default [
       ...reactHooks.configs.recommended.rules,
       'semi': ['error', 'always'],
       'react/jsx-no-target-blank': 'off',
+      'react/no-unescaped-entities': 'off',
     },
   },
 ];

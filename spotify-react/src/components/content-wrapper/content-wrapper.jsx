@@ -1,14 +1,31 @@
-import './global.css';
-import './initialize.css';
-import './index';
-
+import './content-wrapper.css';
+import { ContentCard } from './content-card';
+import { IconButton } from '../buttons/icon-button';
+import { Icon } from '../icons/icon';
+import { IconArrowLeft } from '../buttons/icon-arrow-left';
+import { IconArrowRight } from '../buttons/icon-arrow-right';
+import { Button } from '../buttons/button';
+import { IconDownApp } from '../buttons/Icon-down-app';
+import { IconNotification } from '../buttons/icon-notification';
 
 export function ContentWrapper() {
   return (
+    <div className="content-wrapper">
       <div className="content">
         <header>
           <nav className="flex">
-            <button className="icon-button">
+            <IconButton>
+              <Icon size='sm'>
+                <IconArrowLeft />
+              </Icon>
+            </IconButton>
+
+            <IconButton>
+              <Icon size='sm'>
+                <IconArrowRight />
+              </Icon>
+            </IconButton>
+            {/*             <button className="icon-button">
               <svg className="sm-icon" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16">
                 <path
                   d="M11.03.47a.75.75 0 0 1 0 1.06L4.56 8l6.47 6.47a.75.75 0 1 1-1.06 1.06L2.44 8 9.97.47a.75.75 0 0 1 1.06 0z">
@@ -21,10 +38,36 @@ export function ContentWrapper() {
                   d="M4.97.47a.75.75 0 0 0 0 1.06L11.44 8l-6.47 6.47a.75.75 0 1 0 1.06 1.06L13.56 8 6.03.47a.75.75 0 0 0-1.06 0z">
                 </path>
               </svg>
-            </button>
+            </button> */}
           </nav>
+
+
           <div className="flex items-center">
-            <button className="button-white">Ver planos Premium</button>
+
+            <Button fontSize='14px' color='black' background='white' scale>
+              Ver planos Premium
+            </Button>
+
+            <Button background='rgba(0, 0, 0, .54)' color='white' fontSize='14px'>
+              <Icon color='white' size='sm'>
+                <IconDownApp />
+              </Icon>
+              Instalar aplicativo
+            </Button>
+
+            <IconButton>
+              <Icon size='sm'>
+                <IconNotification />
+              </Icon>
+            </IconButton>
+
+            <IconButton>
+              <Icon size='sm'>
+                <span>E</span>
+              </Icon>
+            </IconButton>
+
+{/*             <button className="button-white">Ver planos Premium</button>
             <button className="button-black">
               <svg className="sm-icon" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16">
                 <path
@@ -43,7 +86,7 @@ export function ContentWrapper() {
             </button>
             <button className="icon-button">
               <span>E</span>
-            </button>
+            </button> */}
           </div>
         </header>
 
@@ -51,19 +94,21 @@ export function ContentWrapper() {
           <section className="flex flex-col">
             <div className="section-title flex justify-space-between items-center">
               <div className="flex flex-col">
-                <a href="#" className="font-title link">Feito para Edy Rodrigues</a>
+                <Button fontWeight='100' highlight link fontSize='24px'>Feito para Edy Rodrigues</Button>
+                {/* <a href="#" className="font-title link">Feito para Edy Rodrigues</a> */}
               </div>
-              <a href="#" className="link text-gray font-bold">Mostrar tudo</a>
+              <Button highlightSmoothingText link fontSize="font-14px">Mostrar tudo</Button>
+              {/* <a href="#" className="link text-gray font-bold">Mostrar tudo</a> */}
             </div>
 
             <div className="cards-container">
-              <div className="section-card">
-                <div>
-                  <img
-                    src="https://dailymix-images.scdn.co/v2/img/ab6761610000e5eb5c3349ddba6b8e064c1bab16/1/pt/default" />
-                </div>
-                <span className="description">Avril Lavigne, Deorro, Pitbull e mais</span>
-              </div>
+
+              <ContentCard.Root>
+                <ContentCard.ImgContainer>
+                  <ContentCard.Img src="https://dailymix-images.scdn.co/v2/img/ab6761610000e5eb5c3349ddba6b8e064c1bab16/1/pt/default" />
+                </ContentCard.ImgContainer>
+                <ContentCard.Description>Avril Lavigne, Deorro, Pitbull e mais</ContentCard.Description>
+              </ContentCard.Root>
 
               <div className="section-card">
                 <div>
@@ -297,5 +342,117 @@ export function ContentWrapper() {
           </div>
         </footer>
       </div>
+
+      <div className="content-playlist none">
+        <div className="info-playlist">
+          <div>
+            <img
+              src="https://mosaic.scdn.co/300/ab67616d00001e02413697269620e16f4466f543ab67616d00001e0260cf7c8dd93815ccd6cb4830ab67616d00001e027c2b1dc1639152beaeadf00dab67616d00001e02ab0b0448520d99ff0aa7b1eb" />
+          </div>
+          <div>
+            <span>Playlist</span>
+
+            <h1>2005-2014</h1>
+
+            <div>
+              <span>
+                <a className="button-link" href="#">
+                  Edy Rodrigues
+                </a>
+              </span>
+              <span>•</span>
+              <span>1 salvamento</span>
+              <span>•</span>
+              <span>119 músicas</span>
+              <span>,</span>
+              <span>cerca de 7h 30min</span>
+            </div>
+          </div>
+        </div>
+        <div className="music-list">
+          <div className="actions">
+            <div>
+              <button className="icon-button play">
+                <svg className="icon" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24">
+                  <path
+                    d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z">
+                  </path>
+                </svg>
+              </button>
+              <button className="icon-button">
+                <svg className="icon" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24">
+                  <path
+                    d="M11.999 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zm-11 9c0-6.075 4.925-11 11-11s11 4.925 11 11-4.925 11-11 11-11-4.925-11-11z">
+                  </path>
+                  <path
+                    d="M17.999 12a1 1 0 0 1-1 1h-4v4a1 1 0 1 1-2 0v-4h-4a1 1 0 1 1 0-2h4V7a1 1 0 1 1 2 0v4h4a1 1 0 0 1 1 1z">
+                  </path>
+                </svg>
+              </button>
+              <button className="icon-button">
+                <svg className="md-icon" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24">
+                  <path
+                    d="M4.5 13.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm15 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm-7.5 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z">
+                  </path>
+                </svg>
+              </button>
+            </div>
+            <button className="button-base">
+              <span>Lista</span>
+              <svg className="icon" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16">
+                <path
+                  d="M15 14.5H5V13h10v1.5zm0-5.75H5v-1.5h10v1.5zM15 3H5V1.5h10V3zM3 3H1V1.5h2V3zm0 11.5H1V13h2v1.5zm0-5.75H1v-1.5h2v1.5z">
+                </path>
+              </svg>
+            </button>
+          </div>
+
+          <div className="playlist-songs">
+
+            <div className="flex justify-space-between items-center">
+              <span>#</span>
+              <span>Título</span>
+              <span>Álbum</span>
+              <span>Adicionada em</span>
+              <button className="icon-button">
+                <svg className="icon" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16">
+                  <path d="M8 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"></path>
+                  <path d="M8 3.25a.75.75 0 0 1 .75.75v3.25H11a.75.75 0 0 1 0 1.5H7.25V4A.75.75 0 0 1 8 3.25z"></path>
+                </svg>
+              </button>
+            </div>
+            <div className="justify-space-between">
+              <span>
+                1
+                <img src="https://i.scdn.co/image/ab67616d00004851413697269620e16f4466f543" />
+              </span>
+              <div className="">
+
+                <a className="button-link" href="#">Throne</a>
+
+                <svg className="sm-icon" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16">
+                  <path
+                    d="M1.75 2.5a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V2.75a.25.25 0 0 0-.25-.25H1.75zM0 2.75C0 1.784.784 1 1.75 1h12.5c.967 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25V2.75z">
+                  </path>
+                  <path d="m6 5 5.196 3L6 11V5z"></path>
+                </svg>
+                <span>
+                  Bring Me The Horizon
+                </span>
+              </div>
+              <div>
+                <a className="button-link" href="#">That's The Spirit</a>
+              </div>
+              <div>
+                <span>16 de mai. de 2022</span>
+              </div>
+              <div>
+                <span>3:11</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }

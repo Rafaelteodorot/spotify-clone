@@ -15,6 +15,12 @@ export function Button(props) {
       ${variant}
       ${props.link ? ' link ' : ''}
       `}
+      style={{ 
+        background: props.background,
+        color: props.color,
+        fontSize: props.fontSize,
+        fontWeight: props.fontWeight,
+      }}
       >
         {props.adornmentLeft}
         <span>{props.children}</span>
@@ -32,4 +38,8 @@ Button.propTypes = {
   highlightSmoothingText: PropTypes.boolean,
   variant: PropTypes.string, // contained, outlined, text
   link: PropTypes.boolean,
+  background: PropTypes.string,
+  color: PropTypes.string,
+  fontSize: PropTypes.string,
+  fontWeight: PropTypes.string,
 };

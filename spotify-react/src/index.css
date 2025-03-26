@@ -23,3 +23,9 @@ body {
   color: #b3b3b3;
   padding: 8px;
 }
+
+main {
+  display: flex;
+  flex: 1;
+  gap: 8px;
+}
